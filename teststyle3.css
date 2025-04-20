@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ffffff;
+}
+
+.navbar {
+    background-color: #c3cfea;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #9f5f80;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8c8dc;
+}
+
+.hero {
+    background: linear-gradient(135deg, #c3cfea, #f8c8dc);
+    color: #333;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding: 25px 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+}
+.floating-icons {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1000;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.floating-icons a {
+width: 50px;
+height: 50px;
+background-color: #f8c8dc;
+color: #fff;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+transition: background-color 0.3s;
+}
+
+.floating-icons a:hover {
+background-color: #c3cfea;
+}
+
+
+footer {
+    background-color: #f0f0f0;
+    padding: 15px 0;
+    text-align: center;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.registration-box {
+    max-width: 500px;
+    width: 100%;
+    margin: 50px auto; /* Centering the box */
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input fields inside the registration form */
+  .registration-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .registration-box input[type="submit"] {
+    background-color: #9f5f80;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .registration-box input[type="submit"]:hover {
+    background-color: #c3cfea;
+  }
+  
+  .registration-box h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+
+
+/* ==== Gradient Background for Registration Page ==== */
+body.registration-page {
+    background: linear-gradient(135deg, #c3cfea, #f8c8dc);
+    min-height: 100vh;
+    padding-top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration-container {
+    margin: 130px auto 40px; /* Add extra top space */
+    /* other styles... */
+}
+

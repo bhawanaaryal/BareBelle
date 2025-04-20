@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Wishlist - GlowCare Skincare</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="teststyle3.css"/>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #c3cfea, #f8c8dc);
+            font-family: 'Quicksand', sans-serif;
+            padding-bottom: 50px;
+        }
+
+        .wishlist-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .wishlist-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #9f5f80;
+            border-bottom: 3px solid #f8c8dc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .wishlist-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            padding: 12px;
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .wishlist-item img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .wishlist-item-details {
+            flex: 1;
+            margin-left: 15px;
+        }
+
+        .wishlist-item-details h5 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .wishlist-item-details p {
+            font-size: 0.9rem;
+            color: #777;
+            margin: 0;
+        }
+
+        .wishlist-item-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .wishlist-item-actions a {
+            text-decoration: none;
+            color: #9f5f80;
+            padding: 8px 14px;
+            background-color: #f8c8dc;
+            border-radius: 30px;
+            border: 1px solid #f8c8dc;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .wishlist-item-actions a:hover {
+            background-color: #c3cfea;
+            border-color: #c3cfea;
+        }
+
+        .empty-wishlist-message {
+            font-size: 1.2rem;
+            color: #777;
+            text-align: center;
+            padding: 40px 0;
+            font-weight: 600;
+        }
+
+        .btn-shop-products {
+            display: block;
+            margin: 0 auto;
+            font-size: 1rem;
+            padding: 12px 35px;
+            background-color: #9f5f80;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            text-align: center;
+            border: 2px solid #9f5f80;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-shop-products:hover {
+            background-color: #f8c8dc;
+            color: #333;
+            border-color: #f8c8dc;
+        }
+
+        .wishlist-item img:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .wishlist-item-details h5:hover {
+            color: #9f5f80;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">GlowCare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container my-5">
+        <div class="wishlist-container">
+            <h2 class="wishlist-title">Your Wishlist</h2>
+
+            <!-- Example Wishlist Item -->
+            <div class="wishlist-item">
+                <img src="https://via.placeholder.com/90" alt="Product Image">
+                <div class="wishlist-item-details">
+                    <h5>GlowCare Skincare Cream</h5>
+                    <p>Price: $25.00</p>
+                </div>
+                <div class="wishlist-item-actions">
+                    <a href="cart.html" class="btn btn-outline-primary">Add to Cart</a>
+                    <a href="#" class="btn btn-outline-danger">Remove</a>
+                </div>
+            </div>
+
+            <!-- Example Wishlist Item -->
+            <div class="wishlist-item">
+                <img src="https://via.placeholder.com/90" alt="Product Image">
+                <div class="wishlist-item-details">
+                    <h5>Radiance Facial Mask</h5>
+                    <p>Price: $15.00</p>
+                </div>
+                <div class="wishlist-item-actions">
+                    <a href="cart.html" class="btn btn-outline-primary">Add to Cart</a>
+                    <a href="#" class="btn btn-outline-danger">Remove</a>
+                </div>
+            </div>
+
+            <!-- Empty Wishlist (when no items) -->
+            <div class="empty-wishlist-message" id="empty-wishlist-message">
+                <p>No items in your wishlist.</p>
+                <a href="products.html" class="btn-shop-products">Shop Products</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

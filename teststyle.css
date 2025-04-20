@@ -1,0 +1,144 @@
+/* style.css */
+
+/* style.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ffffff;
+  }
+  
+  .navbar {
+    background-color: #c3cfea;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    color: #9f5f80;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f8c8dc;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, #c3cfea, #f8c8dc);
+    color: #333;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding: 25px 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+  }
+  
+  .floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .floating-icons a {
+    width: 50px;
+    height: 50px;
+    background-color: #f8c8dc;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .floating-icons a:hover {
+    background-color: #c3cfea;
+  }
+  
+  footer {
+    background-color: #f0f0f0;
+    padding: 15px 0;
+    text-align: center;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  
+
+  .register-form {
+    background-color: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 550px;
+    margin: 40px auto;
+  }
+  
+  .form-label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .form-control:focus {
+    border-color: #c3cfea;
+    box-shadow: 0 0 0 0.2rem rgba(195, 207, 234, 0.3);
+  }
+  
+  .btn-register {
+    background-color: #f8c8dc;
+    color: #333;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .btn-register:hover {
+    background-color: #c3cfea;
+    color: #000;
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #444;
+  }
+  
+  a {
+    color: #ff69b4;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 576px) {
+    .register-form {
+      padding: 25px 20px;
+      margin: 30px 15px;
+    }
+  }
+  
