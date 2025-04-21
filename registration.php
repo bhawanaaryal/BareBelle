@@ -1,3 +1,84 @@
+<?php
+session_start();
+
+// Connect to the database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "glowcare";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form data
+    $name = $_POST["name"];
+    $address = $_POST["address"];
+    $phone = $_POST["phone"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    // Validate email format
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format.";
+        exit();
+    }
+
+    // Check if email already exists in the database
+    $sql = "SELECT * FROM users WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "Email is already taken.";
+        exit();
+    }
+
+    // Validate password strength
+    if (strlen($password) < 8) {
+        echo "Password must be at least 8 characters long.";
+        exit();
+    }
+    if (!preg_match("/[A-Z]/", $password)) {
+        echo "Password must contain at least one uppercase letter.";
+        exit();
+    }
+    if (!preg_match("/[0-9]/", $password)) {
+        echo "Password must contain at least one number.";
+        exit();
+    }
+    if (!preg_match("/[\W]/", $password)) {
+        echo "Password must contain at least one special character.";
+        exit();
+    }
+
+    // Hash the password before storing it
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    // Insert user data into the database
+    $sql = "INSERT INTO users (name, address, phone, email, password) VALUES (?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssss", $name, $address, $phone, $email, $hashedPassword);
+
+    if ($stmt->execute()) {
+        // Redirect to login page after successful registration
+        header("Location: login.php");
+        exit();
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

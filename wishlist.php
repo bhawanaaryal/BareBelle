@@ -1,3 +1,17 @@
+<?php
+session_start(); // Start the session
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to login page if not logged in
+    header("Location: login.php");
+    exit(); // Ensure no further code is executed
+}
+
+// Example of wishlist data (replace with dynamic data from the database or session)
+$wishlist_items = []; // This will be an array of wishlist products (use database logic here)
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

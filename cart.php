@@ -1,3 +1,16 @@
+<?php
+session_start(); // Start the session
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to login page if not logged in
+    header("Location: login.php");
+    exit(); // Ensure no further code is executed
+}
+
+// Your cart page code goes here (replace the following with the actual cart logic)
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
