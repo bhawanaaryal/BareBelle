@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Orders List - GlowCare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #c3cfea, #f8c8dc);
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #9f5f80;
+      margin-bottom: 30px;
+    }
+
+    .btn-complete {
+      background-color: #6bcf63;
+      color: white;
+    }
+
+    .btn-cancel {
+      background-color: #ff6b6b;
+      color: white;
+    }
+
+    .btn-complete:hover {
+      background-color: #5abb55;
+    }
+
+    .btn-cancel:hover {
+      background-color: #e65b5b;
+    }
+
+    .table td,
+    .table th {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="title">Customer Orders</div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped bg-white shadow text-center align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>#</th>
+          <th>Customer</th>
+          <th>Product(s)</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Order Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="ordersTable">
+        <tr>
+          <td>101</td>
+          <td>Bhawana Aryal</td>
+          <td>Glow Serum</td>
+          <td>2</td>
+          <td>Rs. 1200</td>
+          <td>2025-04-18</td>
+          <td><span class="badge bg-warning text-dark">Pending</span></td>
+          <td>
+            <button class="btn btn-sm btn-complete">Mark as Completed</button>
+            <button class="btn btn-sm btn-cancel">Cancel</button>
+          </td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>Elina Joshi</td>
+          <td>Hydrating Sunscreen</td>
+          <td>1</td>
+          <td>Rs. 700</td>
+          <td>2025-04-17</td>
+          <td><span class="badge bg-success">Completed</span></td>
+          <td>
+            <button class="btn btn-sm btn-cancel">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.btn-complete').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const row = this.closest('tr');
+      row.querySelector('td:nth-child(7)').innerHTML = '<span class="badge bg-success">Completed</span>';
+    });
+  });
+
+  document.querySelectorAll('.btn-cancel').forEach(btn => {
+    btn.addEventListener('click', function () {
+      if (confirm("Are you sure you want to cancel/delete this order?")) {
+        this.closest('tr').remove();
+      }
+    });
+  });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
