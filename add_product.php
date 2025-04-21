@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO products (name, description, price, quantity, category, image)
                 VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssdisc", $name, $description, $price, $quantity, $category, $image_path);
+        $stmt->bind_param("ssdiss", $name, $description, $price, $quantity, $category, $image_path);
 
         if ($stmt->execute()) {
             echo "<script>alert('Product added successfully!'); window.location.href='add_product.php';</script>";
@@ -111,7 +111,7 @@ $conn->close();
     <div class="container form-container">
         <div class="form-title">Add New Product</div>
 
-        <form action="add_product_backend.php" method="POST" enctype="multipart/form-data">
+        <form action="add_product.php" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label">Product Name</label>
                 <input type="text" name="name" class="form-control" required>
