@@ -82,7 +82,7 @@
                 <div class="card p-4 text-center">
                     <h5 class="card-title">View Orders</h5>
                     <p class="card-text">Check customer orders and order status.</p>
-                    <a href="orders.php" class="btn btn-custom">View</a>
+                    <a href="view_order.php" class="btn btn-custom">View</a>
                 </div>
             </div>
 
@@ -90,19 +90,11 @@
                 <div class="card p-4 text-center">
                     <h5 class="card-title">Customer List</h5>
                     <p class="card-text">View and manage registered customers.</p>
-                    <a href="customers.php" class="btn btn-custom">Open</a>
+                    <a href="user_list.php" class="btn btn-custom">Open</a>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card p-4 text-center">
-                    <h5 class="card-title">Messages</h5>
-                    <p class="card-text">Check inquiries or contact form messages from users.</p>
-                    <a href="messages.php" class="btn btn-custom">Check</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
