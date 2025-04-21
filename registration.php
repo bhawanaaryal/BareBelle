@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate email format
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format.";
+        echo "<script>alert('Invalid email format.'); window.location.href = 'register.php';</script>";
         exit();
     }
 
@@ -35,25 +35,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        echo "Email is already taken.";
+        echo "<script>alert('Email is already taken.'); window.location.href = 'register.php';</script>";
         exit();
     }
 
     // Validate password strength
     if (strlen($password) < 8) {
-        echo "Password must be at least 8 characters long.";
+        echo "<script>alert('Password must be at least 8 characters long.'); window.location.href = 'register.php';</script>";
         exit();
     }
     if (!preg_match("/[A-Z]/", $password)) {
-        echo "Password must contain at least one uppercase letter.";
+        echo "<script>alert('Password must contain at least one uppercase letter.'); window.location.href = 'register.php';</script>";
         exit();
     }
     if (!preg_match("/[0-9]/", $password)) {
-        echo "Password must contain at least one number.";
+        echo "<script>alert('Password must contain at least one number.'); window.location.href = 'register.php';</script>";
         exit();
     }
     if (!preg_match("/[\W]/", $password)) {
-        echo "Password must contain at least one special character.";
+        echo "<script>alert('Password must contain at least one special character.'); window.location.href = 'register.php';</script>";
         exit();
     }
 
@@ -67,10 +67,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         // Redirect to login page after successful registration
-        header("Location: login.php");
+        echo "<script>alert('Registration successful. Redirecting to login...'); window.location.href = 'login.php';</script>";
         exit();
     } else {
-        echo "Error: " . $stmt->error;
+        echo "<script>alert('Error: " . $stmt->error . "'); window.location.href = 'register.php';</script>";
     }
 
     $stmt->close();
@@ -78,6 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,3 +1,52 @@
+<?php
+// Database connection
+$servername = "localhost";
+$username = "root";  // default username for XAMPP
+$password = "";      // default password for XAMPP (empty by default)
+$dbname = "glowcare"; // your database name
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Get form data
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Check if the email exists in the database
+    $emailCheckQuery = "SELECT * FROM users WHERE email = ?";
+    $stmt = $conn->prepare($emailCheckQuery);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        // Email found, now check password
+        $user = $result->fetch_assoc();
+        
+
+        if (password_verify($password, $user['password'])) {
+            // Password is correct, login successful
+            echo "<script>alert('Login successful!'); window.location.href = 'dashboard.php';</script>";
+        } else {
+            // Password incorrect
+            echo "<script>alert('Invalid password. Please try again.');</script>";
+        }
+    } else {
+        // Email not found
+        echo "<script>alert('No account found with that email. Please register.');</script>";
+    }
+
+    // Close the statement and connection
+    $stmt->close();
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
