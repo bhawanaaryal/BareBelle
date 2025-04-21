@@ -1,3 +1,62 @@
+<?php
+// Start session if needed
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "glowcare";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form inputs
+    $name = $_POST['name'];
+    $description = $_POST['description'];
+    $price = $_POST['price'];
+    $quantity = $_POST['quantity'];
+    $category = $_POST['category'];
+
+    // Handle image upload
+    $image = $_FILES['image']['name'];
+    $temp_image = $_FILES['image']['tmp_name'];
+    $upload_dir = "product_images/";
+
+    // Make sure the folder exists
+    if (!is_dir($upload_dir)) {
+        mkdir($upload_dir, 0755, true);
+    }
+
+    $image_path = $upload_dir . basename($image);
+
+    if (move_uploaded_file($temp_image, $image_path)) {
+        // Insert into database
+        $sql = "INSERT INTO products (name, description, price, quantity, category, image)
+                VALUES (?, ?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssdisc", $name, $description, $price, $quantity, $category, $image_path);
+
+        if ($stmt->execute()) {
+            echo "<script>alert('Product added successfully!'); window.location.href='add_product.php';</script>";
+        } else {
+            echo "<script>alert('Failed to add product.');</script>";
+        }
+
+        $stmt->close();
+    } else {
+        echo "<script>alert('Image upload failed. Please try again.');</script>";
+    }
+}
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
