@@ -77,22 +77,22 @@
             <tbody>
                 <!-- Sample Row: Replace with dynamic PHP rows later -->
                 <tr>
-                    <td><img src="images/sample1.jpg" alt="Product"></td>
-                    <td>Hydrating Face Serum</td>
-                    <td>Serum</td>
-                    <td>25</td>
-                    <td>Rs. 850</td>
+                    <td><img src="product_images/fixdermamoist.jpg" alt="Product"></td>
+                    <td>Fixderma Durave Moisturizer Deep Hydration Face Moisturizer - 50g</td>
+                    <td>Moisturizer</td>
+                    <td>5</td>
+                    <td>Rs. 472</td>
                     <td>
                         <a href="edit_product.php?id=1" class="btn btn-sm btn-edit">Edit</a>
                         <a href="delete_product.php?id=1" class="btn btn-sm btn-delete">Delete</a>
                     </td>
                 </tr>
                 <tr>
-                    <td><img src="images/sample2.jpg" alt="Product"></td>
-                    <td>Glow Moisturizer</td>
-                    <td>Moisturizer</td>
-                    <td>40</td>
-                    <td>Rs. 950</td>
+                    <td><img src="product_images/aqualogicasun.JPG" alt="Product"></td>
+                    <td>Aqualogica Glow+ Sunscreen 80g</td>
+                    <td>Sunscreen</td>
+                    <td>10</td>
+                    <td>Rs. 911</td>
                     <td>
                         <a href="edit_product.php?id=2" class="btn btn-sm btn-edit">Edit</a>
                         <a href="delete_product.php?id=2" class="btn btn-sm btn-delete">Delete</a>
