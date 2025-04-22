@@ -331,11 +331,7 @@ footer {
 }
 
 /* Assuming this is for the image inside .about-section */
-.about-section img {
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
+
 
 .category-box p {
     font-size: 1.05rem;
@@ -343,13 +339,33 @@ footer {
     color: #444;
 }
 /* Who We Are - bigger and right aligned */
-.who-we-are-heading {
+.about-section {
+    background-color: #fff;
+    padding: 80px 20px;
+  }
+  
+  .who-we-are-heading {
+    margin-top: 50px;
     font-size: 3rem;
     font-weight: 700;
     color: #9f5f80;
     text-align: right;
     padding-right: 20px;
-}
+  }
+  
+  .about-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+  }
+  
 
 /* Brand Promise - smaller and centered */
 .brand-promise-heading {

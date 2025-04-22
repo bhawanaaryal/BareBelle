@@ -44,7 +44,23 @@ $conn->close();
       background: linear-gradient(135deg, #fff0f3, #e4d3dc);
       padding-top: 90px;
     }
+    .navbar {
+      background-color: #c3cfea;
+    }
 
+    .navbar-brand {
+      font-weight: 700;
+      color: #9f5f80;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .nav-link:hover {
+      color: #f8c8dc;
+    }
     h2 {
       text-align: center;
       color: #9f5f80;
@@ -107,17 +123,67 @@ $conn->close();
     .icons i:hover {
       color: #703f5d;
     }
+    .floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.floating-icons a {
+    width: 50px;
+    height: 50px;
+    background-color: #f8c8dc;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.floating-icons a:hover {
+    background-color: #c3cfea;
+}
+footer {
+            background-color: #f0f0f0;
+            padding: 15px 0;
+            text-align: center;
+            color: #555;
+            font-size: 0.95rem;
+        }
   </style>
 </head>
 <body>
-
-  <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">GlowCare</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      <div class="container">
     <h2><?php echo ucfirst($category); ?></h2>
     <div class="product-grid">
       <?php if (count($products) > 0): ?>
         <?php foreach ($products as $product): ?>
           <div class="product-card">
-          <img src="product_images/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" />
+          <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" />
           <h5><?php echo $product['name']; ?></h5>
             <p class="price">Rs. <?php echo $product['price']; ?></p>
             <div class="icons">
@@ -131,6 +197,60 @@ $conn->close();
       <?php endif; ?>
     </div>
   </div>
+  <!-- Floating Cart & Wishlist Icons -->
+<div class="floating-icons">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#wishlistModal" title="Wishlist">
+        <i class="bi bi-heart"></i>
+    </a>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal" title="Shopping Cart">
+        <i class="bi bi-cart3"></i>
+    </a>
+</div>
+
+<!-- Wishlist Modal -->
+<div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-end">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Wishlist</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>No items in wishlist.</p>
+          <!-- You can use PHP/JS here later to show dynamic content -->
+        </div>
+        <div class="modal-footer">
+          <a href="wishlist.html" class="btn btn-outline-primary">Edit Wishlist</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-end">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>No items in cart.</p>
+          <!-- Replace this with dynamic product listing -->
+        </div>
+        <div class="modal-footer">
+          <a href="cart.html" class="btn btn-outline-primary">Edit Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+            &copy; 2025 GlowCare Skincare. All rights reserved.
+        </div>
+    </footer>
 
 </body>
 </html>
