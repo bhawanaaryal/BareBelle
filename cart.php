@@ -10,13 +10,12 @@ if (!isset($_SESSION['user_id'])) {
 
 // Your cart page code goes here (replace the following with the actual cart logic)
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Cart | GlowCare</title>
+  <title>Your Cart | BareBelle </title>
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -136,6 +135,40 @@ if (!isset($_SESSION['user_id'])) {
     .checkout-btn:hover {
       background-color: #88476e;
     }
+    .floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.floating-icons a {
+    width: 50px;
+    height: 50px;
+    background-color: #f8c8dc;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.floating-icons a:hover {
+    background-color: #c3cfea;
+}
+footer {
+            background-color: #f0f0f0;
+            padding: 15px 0;
+            text-align: center;
+            color: #555;
+            font-size: 0.95rem;
+        }
   </style>
 </head>
 <body>
@@ -149,10 +182,10 @@ if (!isset($_SESSION['user_id'])) {
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="productscategories.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
         </ul>
       </div>
     </div>
@@ -165,41 +198,27 @@ if (!isset($_SESSION['user_id'])) {
 
       <!-- Cart Item -->
       <div class="cart-card d-flex align-items-center">
-        <img src="https://via.placeholder.com/100" alt="Product" class="cart-img me-4">
+        <img src="product_images/plummoist.jpg" alt="Product" class="cart-img me-4">
         <div class="flex-grow-1">
-          <h5 class="mb-1">Glow Hydrating Serum</h5>
-          <p class="mb-1">Price: Rs. 1200</p>
+          <h5 class="mb-1">Plum Green Tea Oil Free Moisturizer, 50ml
+
+</h5>
+          <p class="mb-1">Price: Rs. 299</p>
           <div class="d-flex align-items-center gap-2">
             <label for="qty1" class="mb-0">Qty:</label>
-            <input type="number" id="qty1" class="quantity-input" value="2" min="1">
+            <input type="number" id="qty1" class="quantity-input" value="1" min="1">
           </div>
         </div>
         <div class="text-end">
-          <p class="fw-bold mb-2">Subtotal: Rs. 2400</p>
+          <p class="fw-bold mb-2">Subtotal: Rs. 299</p>
           <button class="remove-btn" title="Remove"><i class="bi bi-trash"></i></button>
         </div>
       </div>
 
-      <!-- Cart Item -->
-      <div class="cart-card d-flex align-items-center">
-        <img src="https://via.placeholder.com/100" alt="Product" class="cart-img me-4">
-        <div class="flex-grow-1">
-          <h5 class="mb-1">Radiant Cleanser</h5>
-          <p class="mb-1">Price: Rs. 950</p>
-          <div class="d-flex align-items-center gap-2">
-            <label for="qty2" class="mb-0">Qty:</label>
-            <input type="number" id="qty2" class="quantity-input" value="1" min="1">
-          </div>
-        </div>
-        <div class="text-end">
-          <p class="fw-bold mb-2">Subtotal: Rs. 950</p>
-          <button class="remove-btn" title="Remove"><i class="bi bi-trash"></i></button>
-        </div>
-      </div>
 
       <!-- Total + Checkout -->
       <div class="total-section">
-        Total: Rs. 3350
+        Total: Rs. 299
         <br>
         <button class="checkout-btn mt-3">Proceed to Checkout</button>
       </div>
@@ -217,7 +236,60 @@ if (!isset($_SESSION['user_id'])) {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+
+<!-- Floating Cart & Wishlist Icons -->
+<div class="floating-icons">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#wishlistModal" title="Wishlist">
+        <i class="bi bi-heart"></i>
+    </a>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal" title="Shopping Cart">
+        <i class="bi bi-cart3"></i>
+    </a>
+</div>
+
+<!-- Wishlist Modal -->
+<div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-end">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Wishlist</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>No items in wishlist.</p>
+          <!-- You can use PHP/JS here later to show dynamic content -->
+        </div>
+        <div class="modal-footer">
+          <a href="wishlist.html" class="btn btn-outline-primary">Edit Wishlist</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-end">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>No items in cart.</p>
+          <!-- Replace this with dynamic product listing -->
+        </div>
+        <div class="modal-footer">
+          <a href="cart.html" class="btn btn-outline-primary">Edit Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <script>
+        <footer>
+        <div class="container">
+            &copy; 2025 GlowCare Skincare. All rights reserved.
+        </div>
+    </footer>
     // Toggle this to simulate an empty cart
     const isCartEmpty = false;
 
