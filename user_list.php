@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Users List - GlowCare</title>
+  <title>Users List - BareBelle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Bootstrap -->
@@ -66,7 +66,7 @@
         <tr>
           <td>2</td>
           <td>Admin User</td>
-          <td>admin@glowcare.com</td>
+          <td>admin@barebelle.com</td>
           <td>9800000000</td>
           <td>Kathmandu, Nepal</td>
           <td>Admin</td>

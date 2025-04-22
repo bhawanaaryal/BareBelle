@@ -18,7 +18,7 @@ $wishlist_items = []; // This will be an array of wishlist products (use databas
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Wishlist - GlowCare Skincare</title>
+    <title>Your Wishlist - BareBelle Skincare</title>
 
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -154,7 +154,7 @@ $wishlist_items = []; // This will be an array of wishlist products (use databas
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg shadow-sm fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">GlowCare</a>
+      <a class="navbar-brand" href="#">BareBelle</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -176,7 +176,7 @@ $wishlist_items = []; // This will be an array of wishlist products (use databas
             <div class="wishlist-item">
                 <img src="https://via.placeholder.com/90" alt="Product Image">
                 <div class="wishlist-item-details">
-                    <h5>GlowCare Skincare Cream</h5>
+                    <h5>BareBelle Skincare Cream</h5>
                     <p>Price: $25.00</p>
                 </div>
                 <div class="wishlist-item-actions">

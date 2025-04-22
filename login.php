@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GlowCare Login</title>
+  <title>BareBelle Login</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -136,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg shadow-sm fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">GlowCare</a>
+      <a class="navbar-brand" href="#">BareBelle</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -175,7 +175,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <!-- Footer -->
   <footer>
     <div class="container">
-      &copy; 2025 GlowCare Skincare. All rights reserved.
+      &copy; 2025 BareBelle Skincare. All rights reserved.
     </div>
   </footer>
 
