@@ -72,9 +72,9 @@
         <tr>
           <td>101</td>
           <td>Bhawana Aryal</td>
-          <td>Glow Serum</td>
+          <td>Cetaphil Moisturizing Cream (80g)</td>
           <td>2</td>
-          <td>Rs. 1200</td>
+          <td>Rs. 935</td>
           <td>2025-04-18</td>
           <td><span class="badge bg-warning text-dark">Pending</span></td>
           <td>
@@ -85,9 +85,9 @@
         <tr>
           <td>102</td>
           <td>Elina Joshi</td>
-          <td>Hydrating Sunscreen</td>
+          <td>Uv Doux Sunscreen Gel, Spf 50+, 50gm</td>
           <td>1</td>
-          <td>Rs. 700</td>
+          <td>Rs. 1125</td>
           <td>2025-04-17</td>
           <td><span class="badge bg-success">Completed</span></td>
           <td>
