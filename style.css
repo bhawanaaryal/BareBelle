@@ -1,0 +1,360 @@
+/* Reset some default styling for body and html */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ffffff;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #c3cfea;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #9f5f80;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8c8dc;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('banner.jpg.jpeg'); /* Make sure image path is correct */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    margin-top: 350px; /* Adjust this value to move higher */
+    padding-top: 5px;
+}
+
+
+
+
+.hero-img {
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-text {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    
+    padding: 25px 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+}
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 400; /* Light weight for softer text */
+    color: #444;       /* Lighter shade of black */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Optional subtle shadow for readability */
+    padding: 0;        /* Remove padding */
+    background: none;  /* Remove background box */
+    border-radius: 0;  /* No rounding */
+}
+
+
+
+/* Floating Icons Styles */
+.floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.floating-icons a {
+    width: 50px;
+    height: 50px;
+    background-color: #f8c8dc;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.floating-icons a:hover {
+    background-color: #c3cfea;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    text-align: center;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Banner Section */
+.banner {
+    background-color: #f8c8dc;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Featured Products Section */
+.featured-products {
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+}
+
+.featured-products h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.featured-products .card {
+    border: none;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.featured-products .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.featured-products .card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Products Section */
+.products {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.products .card {
+    border: none;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.products .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.products .card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Brand Promise Section */
+.brand-promise {
+    background: linear-gradient(135deg, #c3cfea, #f8c8dc);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.brand-promise h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.brand-promise p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+.brand-promise .btn {
+    background-color: #9f5f80;
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.brand-promise .btn:hover {
+    background-color: #c3cfea;
+}
+
+
+
+/* Brand Promise Boxes */
+.promise-box {
+    background-color: #ffffff;
+    border: 2px solid #f8c8dc;
+    border-radius: 12px;
+    padding: 25px;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.promise-box h5 {
+    font-size: 1.2rem;
+    color: #9f5f80;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.promise-box p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.promise-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Utility */
+.section-padding {
+    padding: 60px 20px;
+}
+/* Categories Section */
+.categories {
+    padding: 100px 0 60px 0;  /* Top padding increased to 100px */
+    background-color: #f8f8f8;
+}
+
+
+.categories h2 {
+    text-align: left;
+    font-size: 2.2rem;
+    color: #9f5f80;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.category-box {
+    background-color: #fff;
+    border: 2px solid #f8c8dc;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.category-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.category-box img {
+    width: 100%;
+    height: 150
+}
+/* About Page Section */
+.about-section {
+    background-color: #fff;
+    padding: 80px 20px;
+}
+
+.about-section h2 {
+    font-size: 2.8rem; /* Increased size */
+    font-weight: 700;
+    color: #9f5f80;
+    margin-bottom: 20px;
+    text-align: right; /* Align to the right */
+}
+
+
+.about-section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    padding-top: 10px;
+}
+
+/* Assuming this is for the image inside .about-section */
+.about-section img {
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.category-box p {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #444;
+}
+/* Who We Are - bigger and right aligned */
+.who-we-are-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #9f5f80;
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* Brand Promise - smaller and centered */
+.brand-promise-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #9f5f80;
+    text-align: center;
+}
