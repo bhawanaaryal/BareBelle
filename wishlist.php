@@ -147,6 +147,40 @@ $wishlist_items = []; // This will be an array of wishlist products (use databas
             color: #9f5f80;
             transition: color 0.3s ease;
         }
+        .floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.floating-icons a {
+    width: 50px;
+    height: 50px;
+    background-color: #f8c8dc;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.floating-icons a:hover {
+    background-color: #c3cfea;
+}
+footer {
+            background-color: #f0f0f0;
+            padding: 15px 0;
+            text-align: center;
+            color: #555;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 
@@ -174,10 +208,12 @@ $wishlist_items = []; // This will be an array of wishlist products (use databas
 
             <!-- Example Wishlist Item -->
             <div class="wishlist-item">
-                <img src="https://via.placeholder.com/90" alt="Product Image">
+                <img src="product_images/dotandkeymoist.JPG" alt="Product Image">
                 <div class="wishlist-item-details">
-                    <h5>BareBelle Skincare Cream</h5>
-                    <p>Price: $25.00</p>
+                    <h5>Dot & Key Watermelon Moisturizer- 60 Ml
+
+</h5>
+                    <p>Price: Rs. 752</p>
                 </div>
                 <div class="wishlist-item-actions">
                     <a href="cart.html" class="btn btn-outline-primary">Add to Cart</a>
@@ -187,10 +223,12 @@ $wishlist_items = []; // This will be an array of wishlist products (use databas
 
             <!-- Example Wishlist Item -->
             <div class="wishlist-item">
-                <img src="https://via.placeholder.com/90" alt="Product Image">
+                <img src="product_images/beautyofjoseonsun.JPG" alt="Product Image">
                 <div class="wishlist-item-details">
-                    <h5>Radiance Facial Mask</h5>
-                    <p>Price: $15.00</p>
+                    <h5>Beauty Of Joseon Spf 50 Relief Sun Cream: Rice + Probiotics - 50ml
+
+</h5>
+                    <p>Price: Rs. 2090</p>
                 </div>
                 <div class="wishlist-item-actions">
                     <a href="cart.html" class="btn btn-outline-primary">Add to Cart</a>
@@ -200,13 +238,60 @@ $wishlist_items = []; // This will be an array of wishlist products (use databas
 
             <!-- Empty Wishlist (when no items) -->
             <div class="empty-wishlist-message" id="empty-wishlist-message">
-                <p>No items in your wishlist.</p>
-                <a href="products.html" class="btn-shop-products">Shop Products</a>
+                <a href="productscategories.php" class="btn-shop-products">Shop Products</a>
             </div>
 
         </div>
     </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+<!-- Floating Cart & Wishlist Icons -->
+<div class="floating-icons">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#wishlistModal" title="Wishlist">
+        <i class="bi bi-heart"></i>
+    </a>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal" title="Shopping Cart">
+        <i class="bi bi-cart3"></i>
+    </a>
+</div>
+
+<!-- Wishlist Modal -->
+<div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-end">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Wishlist</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>No items in wishlist.</p>
+          <!-- You can use PHP/JS here later to show dynamic content -->
+        </div>
+        <div class="modal-footer">
+          <a href="wishlist.html" class="btn btn-outline-primary">Edit Wishlist</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-end">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>No items in cart.</p>
+          <!-- Replace this with dynamic product listing -->
+        </div>
+        <div class="modal-footer">
+          <a href="cart.html" class="btn btn-outline-primary">Edit Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
