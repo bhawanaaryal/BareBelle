@@ -1,3 +1,19 @@
+<?php
+// Connect to database
+$conn = new mysqli('localhost', 'root', '', 'glowcare'); // Change 'your_database_name' to your DB
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch orders with customer names
+$sql = "SELECT o.id AS order_id, u.name AS customer_name, o.total_amount, o.status
+        FROM orders o
+        JOIN users u ON o.user_id = u.id";
+
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,6 +66,8 @@
   </style>
 </head>
 <body>
+
+<!-- Navbar (same as before) -->
 <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">BareBelle Admin</a>
@@ -62,8 +80,6 @@
         <li class="nav-item"><a class="nav-link" href="manage_products.php">Manage Products</a></li>
         <li class="nav-item"><a class="nav-link" href="view_order.php">Manage Orders</a></li>
         <li class="nav-item"><a class="nav-link" href="user_list.php">Manage Customers</a></li>
-
-        <!-- Logout Button -->
         <li class="nav-item ms-3">
           <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
         </li>
@@ -81,40 +97,38 @@
         <tr>
           <th>#</th>
           <th>Customer</th>
-          <th>Product(s)</th>
-          <th>Quantity</th>
           <th>Total</th>
-          <th>Order Date</th>
           <th>Status</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody id="ordersTable">
-        <tr>
-          <td>101</td>
-          <td>Bhawana Aryal</td>
-          <td>Cetaphil Moisturizing Cream (80g)</td>
-          <td>2</td>
-          <td>Rs. 935</td>
-          <td>2025-04-18</td>
-          <td><span class="badge bg-warning text-dark">Pending</span></td>
-          <td>
-            <button class="btn btn-sm btn-complete">Mark as Completed</button>
-            <button class="btn btn-sm btn-cancel">Cancel</button>
-          </td>
-        </tr>
-        <tr>
-          <td>102</td>
-          <td>Elina Joshi</td>
-          <td>Uv Doux Sunscreen Gel, Spf 50+, 50gm</td>
-          <td>1</td>
-          <td>Rs. 1125</td>
-          <td>2025-04-17</td>
-          <td><span class="badge bg-success">Completed</span></td>
-          <td>
-            <button class="btn btn-sm btn-cancel">Delete</button>
-          </td>
-        </tr>
+        <?php if ($result && $result->num_rows > 0): ?>
+          <?php while($order = $result->fetch_assoc()): ?>
+            <tr>
+              <td><?php echo htmlspecialchars($order['order_id']); ?></td>
+              <td><?php echo htmlspecialchars($order['customer_name']); ?></td>
+              <td>Rs. <?php echo htmlspecialchars($order['total_amount']); ?></td>
+              <td>
+                <?php if ($order['status'] == 'Pending'): ?>
+                  <span class="badge bg-warning text-dark">Pending</span>
+                <?php else: ?>
+                  <span class="badge bg-success">Completed</span>
+                <?php endif; ?>
+              </td>
+              <td>
+                <?php if ($order['status'] == 'Pending'): ?>
+                  <button class="btn btn-sm btn-complete">Mark as Completed</button>
+                  <button class="btn btn-sm btn-cancel">Cancel</button>
+                <?php else: ?>
+                  <button class="btn btn-sm btn-cancel">Delete</button>
+                <?php endif; ?>
+              </td>
+            </tr>
+          <?php endwhile; ?>
+        <?php else: ?>
+          <tr><td colspan="5">No orders found.</td></tr>
+        <?php endif; ?>
       </tbody>
     </table>
   </div>
@@ -124,7 +138,7 @@
   document.querySelectorAll('.btn-complete').forEach(btn => {
     btn.addEventListener('click', function () {
       const row = this.closest('tr');
-      row.querySelector('td:nth-child(7)').innerHTML = '<span class="badge bg-success">Completed</span>';
+      row.querySelector('td:nth-child(4)').innerHTML = '<span class="badge bg-success">Completed</span>';
     });
   });
 
@@ -141,3 +155,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<?php
+$conn->close();
+?>

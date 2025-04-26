@@ -1,23 +1,15 @@
 <?php
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "glowcare"; // Use your actual database name
+// Connect to database
+$conn = new mysqli('localhost', 'root', '', 'glowcare'); // Change 'your_database_name' to your DB
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch orders from the database
-$sql = "SELECT orders.id, customers.name, products.name AS product_name, orders.quantity, orders.total, orders.order_date, orders.status 
-        FROM orders
-        JOIN customers ON orders.customer_id = customers.id
-        JOIN products ON orders.product_id = products.id";
+// Fetch orders with customer names
+$sql = "SELECT o.id AS order_id, u.name AS customer_name, o.total_amount, o.status
+        FROM orders o
+        JOIN users u ON o.user_id = u.id";
 
 $result = $conn->query($sql);
 ?>
@@ -28,7 +20,7 @@ $result = $conn->query($sql);
   <meta charset="UTF-8">
   <title>Orders List - BareBelle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
@@ -74,6 +66,8 @@ $result = $conn->query($sql);
   </style>
 </head>
 <body>
+
+<!-- Navbar (same as before) -->
 <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">BareBelle Admin</a>
@@ -86,8 +80,6 @@ $result = $conn->query($sql);
         <li class="nav-item"><a class="nav-link" href="manage_products.php">Manage Products</a></li>
         <li class="nav-item"><a class="nav-link" href="view_order.php">Manage Orders</a></li>
         <li class="nav-item"><a class="nav-link" href="user_list.php">Manage Customers</a></li>
-
-        <!-- Logout Button -->
         <li class="nav-item ms-3">
           <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
         </li>
@@ -105,46 +97,38 @@ $result = $conn->query($sql);
         <tr>
           <th>#</th>
           <th>Customer</th>
-          <th>Product(s)</th>
-          <th>Quantity</th>
           <th>Total</th>
-          <th>Order Date</th>
           <th>Status</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody id="ordersTable">
-        <?php if ($result->num_rows > 0) {
-          while($row = $result->fetch_assoc()) { ?>
+        <?php if ($result && $result->num_rows > 0): ?>
+          <?php while($order = $result->fetch_assoc()): ?>
             <tr>
-              <td><?php echo $row['id']; ?></td>
-              <td><?php echo $row['name']; ?></td>
-              <td><?php echo $row['product_name']; ?></td>
-              <td><?php echo $row['quantity']; ?></td>
-              <td>Rs. <?php echo $row['total']; ?></td>
-              <td><?php echo $row['order_date']; ?></td>
+              <td><?php echo htmlspecialchars($order['order_id']); ?></td>
+              <td><?php echo htmlspecialchars($order['customer_name']); ?></td>
+              <td>Rs. <?php echo htmlspecialchars($order['total_amount']); ?></td>
               <td>
-                <?php if ($row['status'] == 'Completed') { ?>
-                  <span class="badge bg-success">Completed</span>
-                <?php } else { ?>
+                <?php if ($order['status'] == 'Pending'): ?>
                   <span class="badge bg-warning text-dark">Pending</span>
-                <?php } ?>
+                <?php else: ?>
+                  <span class="badge bg-success">Completed</span>
+                <?php endif; ?>
               </td>
               <td>
-                <?php if ($row['status'] != 'Completed') { ?>
+                <?php if ($order['status'] == 'Pending'): ?>
                   <button class="btn btn-sm btn-complete">Mark as Completed</button>
                   <button class="btn btn-sm btn-cancel">Cancel</button>
-                <?php } else { ?>
+                <?php else: ?>
                   <button class="btn btn-sm btn-cancel">Delete</button>
-                <?php } ?>
+                <?php endif; ?>
               </td>
             </tr>
-          <?php }
-        } else { ?>
-          <tr>
-            <td colspan="8">No orders found</td>
-          </tr>
-        <?php } ?>
+          <?php endwhile; ?>
+        <?php else: ?>
+          <tr><td colspan="5">No orders found.</td></tr>
+        <?php endif; ?>
       </tbody>
     </table>
   </div>
@@ -154,7 +138,7 @@ $result = $conn->query($sql);
   document.querySelectorAll('.btn-complete').forEach(btn => {
     btn.addEventListener('click', function () {
       const row = this.closest('tr');
-      row.querySelector('td:nth-child(7)').innerHTML = '<span class="badge bg-success">Completed</span>';
+      row.querySelector('td:nth-child(4)').innerHTML = '<span class="badge bg-success">Completed</span>';
     });
   });
 
@@ -173,5 +157,5 @@ $result = $conn->query($sql);
 </html>
 
 <?php
-$conn->close(); // Close the connection
+$conn->close();
 ?>
