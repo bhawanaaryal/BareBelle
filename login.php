@@ -167,7 +167,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit" class="btn btn-primary" style="background-color: #9f5f80; border: none;">Login</button>
       </div>
       <div class="register-link">
-        Don't have an account? <a href="registration.php">Register here</a>
+        Don't have an account? <a href="register.php">Register here</a>
       </div>
     </form>
   </div>
