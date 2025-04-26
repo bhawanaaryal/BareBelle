@@ -1,3 +1,36 @@
+<?php
+// Connect to database
+$conn = new mysqli('localhost', 'root', '', 'glowcare'); // Update credentials if needed
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Handle update request
+if (isset($_POST['update'])) {
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $role = $_POST['role'];
+
+    $update_sql = "UPDATE users SET name='$name', email='$email', phone='$phone', address='$address', role='$role' WHERE id='$id'";
+    $conn->query($update_sql);
+}
+
+// Handle delete request
+if (isset($_POST['delete'])) {
+    $id = $_POST['id'];
+    $delete_sql = "DELETE FROM users WHERE id='$id'";
+    $conn->query($delete_sql);
+}
+
+// Fetch all users
+$sql = "SELECT * FROM users";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +49,6 @@
       padding: 60px 20px;
       min-height: 100vh;
     }
-
     .title {
       text-align: center;
       font-size: 2rem;
@@ -24,12 +56,17 @@
       color: #9f5f80;
       margin-bottom: 30px;
     }
-
+    .btn-update {
+      background-color: #f8c8dc;
+      color: #333;
+    }
+    .btn-update:hover {
+      background-color: #e4acc2;
+    }
     .btn-delete {
       background-color: #ff6b6b;
       color: white;
     }
-
     .btn-delete:hover {
       background-color: #e55c5c;
     }
@@ -48,8 +85,6 @@
         <li class="nav-item"><a class="nav-link" href="manage_products.php">Manage Products</a></li>
         <li class="nav-item"><a class="nav-link" href="view_order.php">Manage Orders</a></li>
         <li class="nav-item"><a class="nav-link" href="user_list.php">Manage Customers</a></li>
-
-        <!-- Logout Button -->
         <li class="nav-item ms-3">
           <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
         </li>
@@ -74,41 +109,53 @@
           <th>Actions</th>
         </tr>
       </thead>
-      <tbody id="usersTable">
-        <tr>
-          <td>1</td>
-          <td>Bhawana Aryal</td>
-          <td>bhawana@example.com</td>
-          <td>9812345678</td>
-          <td>Pokhara, Nepal</td>
-          <td>Customer</td>
-          <td><button class="btn btn-sm btn-delete">Delete</button></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Admin User</td>
-          <td>admin@barebelle.com</td>
-          <td>9800000000</td>
-          <td>Kathmandu, Nepal</td>
-          <td>Admin</td>
-          <td><button class="btn btn-sm btn-delete">Delete</button></td>
-        </tr>
+      <tbody>
+        <?php if ($result->num_rows > 0): ?>
+          <?php $i = 1; while($row = $result->fetch_assoc()): ?>
+            <tr>
+              <form method="post" action="">
+                <td><?php echo $i++; ?></td>
+                <td>
+                  <input type="text" name="name" class="form-control" value="<?php echo htmlspecialchars($row['name']); ?>" required>
+                </td>
+                <td>
+                  <input type="email" name="email" class="form-control" value="<?php echo htmlspecialchars($row['email']); ?>" required>
+                </td>
+                <td>
+                  <input type="text" name="phone" class="form-control" value="<?php echo htmlspecialchars($row['phone']); ?>" required>
+                </td>
+                <td>
+                  <input type="text" name="address" class="form-control" value="<?php echo htmlspecialchars($row['address']); ?>" required>
+                </td>
+                <td>
+                  <select name="role" class="form-select" required>
+                    <option value="Customer" <?php if($row['role'] == 'Customer') echo 'selected'; ?>>Customer</option>
+                    <option value="Admin" <?php if($row['role'] == 'Admin') echo 'selected'; ?>>Admin</option>
+                  </select>
+                </td>
+                <td class="d-flex justify-content-center gap-2">
+                  <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                  <button type="submit" name="update" class="btn btn-sm btn-update">Update</button>
+                  <button type="submit" name="delete" class="btn btn-sm btn-delete" onclick="return confirm('Are you sure you want to delete this user?');">Delete</button>
+                </td>
+              </form>
+            </tr>
+          <?php endwhile; ?>
+        <?php else: ?>
+          <tr>
+            <td colspan="7">No users found.</td>
+          </tr>
+        <?php endif; ?>
       </tbody>
     </table>
   </div>
 </div>
 
-<script>
-  document.querySelectorAll('.btn-delete').forEach(btn => {
-    btn.addEventListener('click', function () {
-      if (confirm("Are you sure you want to delete this user?")) {
-        this.closest('tr').remove();
-      }
-    });
-  });
-</script>
-
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<?php
+$conn->close();
+?>
