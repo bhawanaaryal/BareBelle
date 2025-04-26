@@ -62,7 +62,7 @@
     <div class="row align-items-center">
       <!-- Image -->
       <div class="col-md-6 mb-4">
-        <img src="download.jpeg" class="img-fluid rounded shadow about-image" alt="About GlowCare" />
+        <img src="pics/download.jpeg" class="img-fluid rounded shadow about-image" alt="About GlowCare" />
       </div>
 
       <!-- Text -->

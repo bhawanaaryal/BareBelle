@@ -213,43 +213,43 @@ footer {
       <div class="category-grid">
         <div class="category-box">
           <a href="products.php?category=moisturizer">
-            <img src="mosturizer.jpeg" alt="Moisturizer">
+            <img src="pics/mosturizer.jpeg" alt="Moisturizer">
             <p>Moisturizer</p>
           </a>
         </div>
         <div class="category-box">
           <a href="products.php?category=serum">
-            <img src="serum.jpeg" alt="Serums">
+            <img src="pics/serum.jpeg" alt="Serums">
             <p>Serums</p>
           </a>
         </div>
         <div class="category-box">
           <a href="products.php?category=sunscreen">
-            <img src="sunscreen.jpeg" alt="Sunscreens">
+            <img src="pics/sunscreen.jpeg" alt="Sunscreens">
             <p>Sunscreens</p>
           </a>
         </div>
         <div class="category-box">
           <a href="products.php?category=facemask">
-            <img src="facemask.jpeg" alt="Face Mask">
+            <img src="pics/facemask.jpeg" alt="Face Mask">
             <p>Face Mask</p>
           </a>
         </div>
         <div class="category-box">
           <a href="products.php?category=toner">
-            <img src="toner.jpeg" alt="Toner">
+            <img src="pics/toner.jpeg" alt="Toner">
             <p>Toner</p>
           </a>
         </div>
         <div class="category-box">
           <a href="products.php?category=facewash">
-            <img src="face wash.jpeg" alt="Face Wash">
+            <img src="pics/face wash.jpeg" alt="Face Wash">
             <p>Face Wash</p>
           </a>
         </div>
         <div class="category-box">
           <a href="products.php?category=cleanser">
-            <img src="cleanser.jpeg" alt="Cleanser">
+            <img src="pics/cleanser.jpeg" alt="Cleanser">
             <p>Cleanser</p>
           </a>
         </div>
