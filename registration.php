@@ -171,10 +171,10 @@ $conn->close();
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-          <li class="nav-item"><a class="nav-link active" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
+          <li class="nav-item"><a class="nav-link active" href="register.php">Register</a></li>
         </ul>
       </div>
     </div>
@@ -208,7 +208,7 @@ $conn->close();
         <button type="submit" class="btn btn-primary" style="background-color: #9f5f80; border: none;">Register</button>
       </div>
       <div class="login-link">
-        Already have an account? <a href="login.html">Login here</a>
+        Already have an account? <a href="login.php">Login here</a>
       </div>
     </form>
   </div>

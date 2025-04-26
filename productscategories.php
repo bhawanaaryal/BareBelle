@@ -147,7 +147,7 @@ footer {
           <!-- You can use PHP/JS here later to show dynamic content -->
         </div>
         <div class="modal-footer">
-          <a href="wishlist.html" class="btn btn-outline-primary">Edit Wishlist</a>
+          <a href="wishlist.php" class="btn btn-outline-primary">Edit Wishlist</a>
         </div>
       </div>
     </div>
@@ -166,7 +166,7 @@ footer {
           <!-- Replace this with dynamic product listing -->
         </div>
         <div class="modal-footer">
-          <a href="cart.html" class="btn btn-outline-primary">Edit Cart</a>
+          <a href="cart.php" class="btn btn-outline-primary">Edit Cart</a>
         </div>
       </div>
     </div>
@@ -193,7 +193,7 @@ footer {
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="productscategories.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="productscategories.php">Products</a></li>
         <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
       </ul>
     </div>

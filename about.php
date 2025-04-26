@@ -19,16 +19,16 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="home.html">GlowCare</a>
+      <a class="navbar-brand" href="home.php">GlowCare</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.php">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
         </ul>
       </div>
     </div>
