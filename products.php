@@ -169,6 +169,7 @@ footer {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      
       <!-- Search Form with Icon -->
       <form class="d-flex me-3" action="search.php" method="GET">
         <input class="form-control me-2" type="search" name="query" placeholder="Search..." aria-label="Search" style="width: 180px;">
@@ -178,15 +179,21 @@ footer {
       </form>
 
       <!-- Navigation Links -->
-      <ul class="navbar-nav">
+      <ul class="navbar-nav align-items-center">
         <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
         <li class="nav-item"><a class="nav-link" href="productscategories.php">Products</a></li>
         <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+
+        <!-- Logout Button -->
+        <li class="nav-item ms-3">
+        <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
       <div class="container">
     <h2><?php echo ucfirst($category); ?></h2>
     <div class="product-grid">
