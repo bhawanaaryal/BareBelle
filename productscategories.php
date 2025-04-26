@@ -77,7 +77,7 @@
       margin: 0;
       padding: 12px 0;
       font-weight: 600;
-      color: #7a4c5c; /* updated to a more elegant, muted tone */
+      color: #7a4c5c; /* updated  a more elegant, muted tone */
       background-color: #fbeff3;
     }
     .floating-icons {
