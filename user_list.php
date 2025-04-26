@@ -129,8 +129,8 @@ $result = $conn->query($sql);
                 </td>
                 <td>
                   <select name="role" class="form-select" required>
-                    <option value="Customer" <?php if($row['role'] == 'Customer') echo 'selected'; ?>>Customer</option>
-                    <option value="Admin" <?php if($row['role'] == 'Admin') echo 'selected'; ?>>Admin</option>
+                    <option value="customer" <?php if($row['role'] == 'customer') echo 'selected'; ?>>Customer</option>
+                    <option value="admin" <?php if($row['role'] == 'admin') echo 'selected'; ?>>Admin</option>
                   </select>
                 </td>
                 <td class="d-flex justify-content-center gap-2">
