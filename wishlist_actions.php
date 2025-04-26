@@ -4,8 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Start logging
-$debug_log = fopen("cart_actions_debug.log", "a");
-fwrite($debug_log, "\n=== Cart Action Request at " . date('Y-m-d H:i:s') . " ===\n");
+$debug_log = fopen("wishlist_actions_debug.log", "a");
+fwrite($debug_log, "\n=== Wishlist Action Request at " . date('Y-m-d H:i:s') . " ===\n");
 
 // Start session
 session_start();
@@ -80,7 +80,7 @@ fwrite($debug_log, "Database connection status: " . ($conn->ping() ? "Connected"
 
 if ($action == 'add') {
     // Log addition attempt
-    fwrite($debug_log, "Attempting to add product $product_id to cart for user $user_id\n");
+    fwrite($debug_log, "Attempting to add product $product_id to wishlist for user $user_id\n");
     
     // Check if product exists in the products table
     $product_check = mysqli_query($conn, "SELECT id FROM products WHERE id='$product_id'");
@@ -91,24 +91,24 @@ if ($action == 'add') {
         exit;
     }
     
-    // Check if product is already in cart
-    $check = mysqli_query($conn, "SELECT * FROM cart WHERE user_id='$user_id' AND product_id='$product_id'");
+    // Check if product is already in wishlist
+    $check = mysqli_query($conn, "SELECT * FROM wishlist WHERE user_id='$user_id' AND product_id='$product_id'");
     
     // Log query
     fwrite($debug_log, "Check query executed: " . ($check !== false ? "Success" : "Failed - " . mysqli_error($conn)) . "\n");
     
     if ($check && mysqli_num_rows($check) > 0) {
-        fwrite($debug_log, "Product already in cart\n");
-        echo "already_in_cart";
+        fwrite($debug_log, "Product already in wishlist\n");
+        echo "already_in_wishlist";
     } else {
-        // Insert into cart
-        $insert = mysqli_query($conn, "INSERT INTO cart (user_id, product_id, quantity) VALUES ('$user_id', '$product_id', 1)");
+        // Insert into wishlist
+        $insert = mysqli_query($conn, "INSERT INTO wishlist (user_id, product_id) VALUES ('$user_id', '$product_id')");
         
         // Log insert query
         fwrite($debug_log, "Insert query executed: " . ($insert ? "Success" : "Failed - " . mysqli_error($conn)) . "\n");
         
         if ($insert) {
-            fwrite($debug_log, "Product added to cart successfully\n");
+            fwrite($debug_log, "Product added to wishlist successfully\n");
             echo "added";
         } else {
             fwrite($debug_log, "ERROR: Failed to add product - " . mysqli_error($conn) . "\n");
@@ -116,39 +116,20 @@ if ($action == 'add') {
         }
     }
 } elseif ($action == 'remove') {
-    // Remove from cart
-    fwrite($debug_log, "Attempting to remove product $product_id from cart for user $user_id\n");
+    // Remove from wishlist
+    fwrite($debug_log, "Attempting to remove product $product_id from wishlist for user $user_id\n");
     
-    $delete = mysqli_query($conn, "DELETE FROM cart WHERE user_id='$user_id' AND product_id='$product_id'");
+    $delete = mysqli_query($conn, "DELETE FROM wishlist WHERE user_id='$user_id' AND product_id='$product_id'");
     
     // Log delete query
     fwrite($debug_log, "Delete query executed: " . ($delete ? "Success" : "Failed - " . mysqli_error($conn)) . "\n");
     
     if ($delete) {
-        fwrite($debug_log, "Product removed from cart successfully\n");
+        fwrite($debug_log, "Product removed from wishlist successfully\n");
         echo "removed";
     } else {
         fwrite($debug_log, "ERROR: Failed to remove product - " . mysqli_error($conn) . "\n");
         echo "remove_failed";
-    }
-} elseif ($action == 'update') {
-    // Update quantity
-    $qty = isset($_POST['quantity']) ? intval($_POST['quantity']) : 1;
-    if ($qty < 1) $qty = 1;
-    
-    fwrite($debug_log, "Attempting to update product $product_id quantity to $qty for user $user_id\n");
-    
-    $update = mysqli_query($conn, "UPDATE cart SET quantity='$qty' WHERE user_id='$user_id' AND product_id='$product_id'");
-    
-    // Log update query
-    fwrite($debug_log, "Update query executed: " . ($update ? "Success" : "Failed - " . mysqli_error($conn)) . "\n");
-    
-    if ($update) {
-        fwrite($debug_log, "Product quantity updated successfully\n");
-        echo "updated";
-    } else {
-        fwrite($debug_log, "ERROR: Failed to update quantity - " . mysqli_error($conn) . "\n");
-        echo "update_failed";
     }
 } else {
     fwrite($debug_log, "ERROR: Invalid action\n");

@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "glowcare";
+$dbname = "barbie";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
