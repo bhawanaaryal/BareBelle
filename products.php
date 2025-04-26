@@ -160,7 +160,8 @@ footer {
   </style>
 </head>
 <body>
-    <!-- Navbar -->
+TODO: Be ablle to add the products to cart and wishlist later on so that i can fetch later to display it on the pages and modals.
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
   <div class="container">
@@ -206,7 +207,7 @@ footer {
             <div class="icons">
                     <i class="bi bi-cart add-to-cart" data-name="<?php echo $product['name']; ?>"></i>
                     <i class="bi bi-heart add-to-wishlist" data-name="<?php echo $product['name']; ?>"></i>
-                </div>
+            </div>
           </div>
         <?php endforeach; ?>
       <?php else: ?>
