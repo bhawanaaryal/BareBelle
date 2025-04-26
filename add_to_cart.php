@@ -6,43 +6,40 @@ $password = "";
 $dbname = "glowcare";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// Assuming user login is required
+// Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
-  header("Location: login.php");
-  exit();
+  echo "Please login first.";
+  exit;
 }
 
-$user_id = $_SESSION['user_id'];
-$product_id = isset($_GET['product_id']) ? intval($_GET['product_id']) : 0;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $name = $_POST['name'];
 
-if ($product_id > 0) {
-  // Check if product already exists in cart
-  $check = $conn->prepare("SELECT id FROM cart WHERE user_id = ? AND product_id = ?");
-  $check->bind_param("ii", $user_id, $product_id);
-  $check->execute();
-  $check->store_result();
+  // Get product details
+  $stmt = $conn->prepare("SELECT id, price FROM products WHERE name = ?");
+  $stmt->bind_param("s", $name);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  
+  if ($result->num_rows > 0) {
+    $product = $result->fetch_assoc();
+    $user_id = $_SESSION['user_id'];
+    $product_id = $product['id'];
+    $price = $product['price'];
 
-  if ($check->num_rows > 0) {
-    // If already exists, increase quantity by 1
-    $update = $conn->prepare("UPDATE cart SET quantity = quantity + 1 WHERE user_id = ? AND product_id = ?");
-    $update->bind_param("ii", $user_id, $product_id);
-    $update->execute();
+    // Insert into cart table (create if not exists!)
+    $insert = $conn->prepare("INSERT INTO cart (user_id, product_id, quantity, price) VALUES (?, ?, 1, ?)");
+    $insert->bind_param("iid", $user_id, $product_id, $price);
+    $insert->execute();
+
+    echo "Product added to cart!";
   } else {
-    // Else, insert new record
-    $stmt = $conn->prepare("INSERT INTO cart (user_id, product_id, quantity) VALUES (?, ?, 1)");
-    $stmt->bind_param("ii", $user_id, $product_id);
-    $stmt->execute();
-    $stmt->close();
+    echo "Product not found.";
   }
-
-  $check->close();
 }
-
-// After adding to cart, redirect back
-header("Location: {$_SERVER['HTTP_REFERER']}");
-exit();
 ?>

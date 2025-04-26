@@ -204,9 +204,9 @@ footer {
           <h5><?php echo $product['name']; ?></h5>
             <p class="price">Rs. <?php echo $product['price']; ?></p>
             <div class="icons">
-              <i class="bi bi-cart-plus-fill" title="Add to Cart"></i>
-              <i class="bi bi-heart-fill" title="Add to Wishlist"></i>
-            </div>
+                    <i class="bi bi-cart add-to-cart" data-name="<?php echo $product['name']; ?>"></i>
+                    <i class="bi bi-heart add-to-wishlist" data-name="<?php echo $product['name']; ?>"></i>
+                </div>
           </div>
         <?php endforeach; ?>
       <?php else: ?>
@@ -268,6 +268,37 @@ footer {
             &copy; 2025 GlowCare Skincare. All rights reserved.
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add to Cart
+  $('.add-to-cart').click(function(){
+    const productName = $(this).data('name');
+    $.ajax({
+      url: 'add_to_cart.php',
+      method: 'POST',
+      data: { name: productName },
+      success: function(response) {
+        alert(response);
+      }
+    });
+  });
+
+  // Add to Wishlist
+  $('.add-to-wishlist').click(function(){
+    const productName = $(this).data('name');
+    $.ajax({
+      url: 'add_to_wishlist.php',
+      method: 'POST',
+      data: { name: productName },
+      success: function(response) {
+        alert(response);
+      }
+    });
+  });
+});
+</script>
+
 
 </body>
 </html>
