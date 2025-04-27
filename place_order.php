@@ -45,7 +45,7 @@ if (isset($_POST['place_order'])) {
         $stmt->bind_param("i", $user_id);
         $stmt->execute();
 
-        header("Location: index.php?message=order_placed");
+        header("Location: home.php?message=order_placed");
         exit();
     } elseif ($payment_method == 'khalti') {
         // Placeholder: redirect to Khalti payment page later
