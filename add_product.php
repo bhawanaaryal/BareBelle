@@ -2,6 +2,11 @@
 // Start session if needed
 session_start();
 
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    // Redirect to login page or show an error message
+    header("Location: login.php");
+    exit();
+}
 // Database connection
 $servername = "localhost";
 $username = "root";

@@ -1,5 +1,12 @@
 <?php
 // Connect to database
+session_start();
+
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    // Redirect to login page or show an error message
+    header("Location: login.php");
+    exit();
+}
 $conn = new mysqli('localhost', 'root', '', 'glowcare'); // update credentials if needed
 
 if ($conn->connect_error) {
