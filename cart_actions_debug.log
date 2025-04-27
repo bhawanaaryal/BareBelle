@@ -230,3 +230,34 @@ Check query executed: Success
 Product already in cart
 Database connection closed
 === End of request ===
+
+=== Cart Action Request at 2025-04-27 04:39:05 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
