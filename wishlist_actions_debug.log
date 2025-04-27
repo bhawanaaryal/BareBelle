@@ -119,3 +119,122 @@ Insert query executed: Success
 Product added to wishlist successfully
 Database connection closed
 === End of request ===
+=== Wishlist Action Request at 2025-04-27 04:13:32 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to wishlist for user 1
+Check query executed: Success
+Product already in wishlist
+Database connection closed
+=== End of request ===
+
+=== Wishlist Action Request at 2025-04-27 04:13:35 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to wishlist for user 1
+Check query executed: Success
+Product already in wishlist
+Database connection closed
+=== End of request ===
+
+=== Wishlist Action Request at 2025-04-27 04:13:42 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => remove
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 1
+Action: remove
+Product ID: 4
+Database connection status: Connected
+Attempting to remove product 4 from wishlist for user 1
+Delete query executed: Success
+Product removed from wishlist successfully
+Database connection closed
+=== End of request ===
+
+=== Wishlist Action Request at 2025-04-27 04:13:43 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => remove
+)
+
+POST data: Array
+(
+    [product_id] => 9
+)
+
+Database connection included
+User ID: 1
+Action: remove
+Product ID: 9
+Database connection status: Connected
+Attempting to remove product 9 from wishlist for user 1
+Delete query executed: Success
+Product removed from wishlist successfully
+Database connection closed
+=== End of request ===
