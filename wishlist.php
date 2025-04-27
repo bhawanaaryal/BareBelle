@@ -8,8 +8,37 @@ if (!isset($_SESSION['user_id'])) {
     exit(); // Ensure no further code is executed
 }
 
-// Example of wishlist data (replace with dynamic data from the database or session)
-$wishlist_items = []; // This will be an array of wishlist products (use database logic here)
+// Include database connection
+include 'db_connect.php';
+
+// Get user ID
+$user_id = $_SESSION['user_id'];
+
+// Get wishlist items
+$wishlist_query = mysqli_query($conn, "SELECT w.id, w.product_id, p.name, p.price, p.image 
+                                       FROM wishlist w 
+                                       JOIN products p ON w.product_id = p.id 
+                                       WHERE w.user_id = '$user_id'");
+
+// Check if query was successful
+if (!$wishlist_query) {
+    // Display error for debugging (remove in production)
+    $error_message = "Database Error: " . mysqli_error($conn);
+    $wishlist_items = [];
+    $is_wishlist_empty = true;
+} else {
+    // Get wishlist items
+    $wishlist_items = [];
+    while ($item = mysqli_fetch_assoc($wishlist_query)) {
+        $wishlist_items[] = $item;
+    }
+
+    // Check if wishlist is empty
+    $is_wishlist_empty = (count($wishlist_items) == 0);
+}
+
+// Close the database connection
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -18,20 +47,41 @@ $wishlist_items = []; // This will be an array of wishlist products (use databas
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Wishlist - BareBelle Skincare</title>
+    <title>Your Wishlist - GlowCare Skincare</title>
 
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="teststyle3.css"/>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <style>
         body {
             background: linear-gradient(135deg, #c3cfea, #f8c8dc);
             font-family: 'Quicksand', sans-serif;
+            padding-top: 80px;
             padding-bottom: 50px;
+        }
+
+        .navbar {
+            background-color: #c3cfea;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #9f5f80;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .nav-link:hover {
+            color: #f8c8dc;
         }
 
         .wishlist-container {
@@ -94,20 +144,29 @@ $wishlist_items = []; // This will be an array of wishlist products (use databas
             gap: 10px;
         }
 
-        .wishlist-item-actions a {
-            text-decoration: none;
-            color: #9f5f80;
+        .wishlist-item-actions button {
+            color: #fff;
             padding: 8px 14px;
-            background-color: #f8c8dc;
             border-radius: 30px;
-            border: 1px solid #f8c8dc;
             font-size: 0.9rem;
             transition: background-color 0.3s;
+            border: none;
         }
 
-        .wishlist-item-actions a:hover {
-            background-color: #c3cfea;
-            border-color: #c3cfea;
+        .btn-add-to-cart {
+            background-color: #9f5f80;
+        }
+
+        .btn-add-to-cart:hover {
+            background-color: #865069;
+        }
+
+        .btn-remove {
+            background-color: #dc3545;
+        }
+
+        .btn-remove:hover {
+            background-color: #bb2d3b;
         }
 
         .empty-wishlist-message {
@@ -147,170 +206,300 @@ $wishlist_items = []; // This will be an array of wishlist products (use databas
             color: #9f5f80;
             transition: color 0.3s ease;
         }
+        
         .floating-icons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
 
-.floating-icons a {
-    width: 50px;
-    height: 50px;
-    background-color: #f8c8dc;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: background-color 0.3s;
-}
+        .floating-icons a {
+            width: 50px;
+            height: 50px;
+            background-color: #f8c8dc;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
 
-.floating-icons a:hover {
-    background-color: #c3cfea;
-}
-footer {
+        .floating-icons a:hover {
+            background-color: #c3cfea;
+        }
+        
+        footer {
             background-color: #f0f0f0;
             padding: 15px 0;
             text-align: center;
             color: #555;
             font-size: 0.95rem;
         }
+        
+        .alert {
+            position: fixed;
+            top: 90px;
+            right: 20px;
+            max-width: 300px;
+            z-index: 1050;
+            display: none;
+        }
+        
+        #debugConsole {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            display: none;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 2000;
+        }
+        
+        .debug-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 2001;
+            opacity: 0.7;
+        }
     </style>
 </head>
 
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">BareBelle</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      
-      <!-- Search Form with Icon -->
-      <form class="d-flex me-3" action="search.php" method="GET">
-        <input class="form-control me-2" type="search" name="query" placeholder="Search..." aria-label="Search" style="width: 180px;">
-        <button class="btn btn-outline-secondary" type="submit">
-          <i class="bi bi-search"></i>
-        </button>
-      </form>
-
-      <!-- Navigation Links -->
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="productscategories.php">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
-
-        <!-- Logout Button -->
-        <li class="nav-item ms-3">
-        <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
-        </li>
-      </ul>
+    <!-- Debug Console -->
+    <button class="btn btn-sm btn-secondary debug-btn" onclick="toggleDebugConsole()">Debug</button>
+    <div id="debugConsole">
+        <h6>Debug Console</h6>
+        <div id="debugOutput"></div>
     </div>
-  </div>
-</nav>
+
+    <!-- Alert for notifications -->
+    <div class="alert" id="wishlistAlert" role="alert" style="display: none;"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">GlowCare</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <!-- Search Form with Icon -->
+                <form class="d-flex me-3" action="search.php" method="GET">
+                    <input class="form-control me-2" type="search" name="query" placeholder="Search..." aria-label="Search" style="width: 180px;">
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+
+                <!-- Navigation Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.php">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div class="container my-5">
+        <!-- Display error if any -->
+        <?php if(isset($error_message)): ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo $error_message; ?>
+        </div>
+        <?php endif; ?>
+        
         <div class="wishlist-container">
             <h2 class="wishlist-title">Your Wishlist</h2>
 
-            <!-- Example Wishlist Item -->
-            <div class="wishlist-item">
-                <img src="product_images/dotandkeymoist.JPG" alt="Product Image">
-                <div class="wishlist-item-details">
-                    <h5>Dot & Key Watermelon Moisturizer- 60 Ml
-
-</h5>
-                    <p>Price: Rs. 752</p>
+            <?php if(!$is_wishlist_empty): ?>
+                <!-- Wishlist Items -->
+                <?php foreach($wishlist_items as $item): ?>
+                <div class="wishlist-item" id="wishlist-item-<?php echo $item['product_id']; ?>">
+                    <?php if(!empty($item['image'])): ?>
+                        <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>">
+                    <?php else: ?>
+                        <img src="product_images/placeholder.jpg" alt="Product Image">
+                    <?php endif; ?>
+                    
+                    <div class="wishlist-item-details">
+                        <h5><?php echo htmlspecialchars($item['name']); ?></h5>
+                        <p>Price: Rs. <?php echo number_format($item['price'], 2); ?></p>
+                    </div>
+                    
+                    <div class="wishlist-item-actions">
+                        <button class="btn-add-to-cart" onclick="addToCart(<?php echo $item['product_id']; ?>, '<?php echo addslashes($item['name']); ?>')">
+                            <i class="bi bi-cart-plus"></i> Add to Cart
+                        </button>
+                        <button class="btn-remove" onclick="removeFromWishlist(<?php echo $item['product_id']; ?>, '<?php echo addslashes($item['name']); ?>')">
+                            <i class="bi bi-trash"></i> Remove
+                        </button>
+                    </div>
                 </div>
-                <div class="wishlist-item-actions">
-                    <a href="cart.php" class="btn btn-outline-primary">Add to Cart</a>
-                    <a href="#" class="btn btn-outline-danger">Remove</a>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <!-- Empty Wishlist Message -->
+                <div class="empty-wishlist-message">
+                    <p>Your wishlist is empty.</p>
+                    <a href="products.php" class="btn-shop-products">Shop Products</a>
                 </div>
-            </div>
-
-            <!-- Example Wishlist Item -->
-            <div class="wishlist-item">
-                <img src="product_images/beautyofjoseonsun.JPG" alt="Product Image">
-                <div class="wishlist-item-details">
-                    <h5>Beauty Of Joseon Spf 50 Relief Sun Cream: Rice + Probiotics - 50ml
-
-</h5>
-                    <p>Price: Rs. 2090</p>
-                </div>
-                <div class="wishlist-item-actions">
-                    <a href="cart.php" class="btn btn-outline-primary">Add to Cart</a>
-                    <a href="#" class="btn btn-outline-danger">Remove</a>
-                </div>
-            </div>
-
-            <!-- Empty Wishlist (when no items) -->
-            <div class="empty-wishlist-message" id="empty-wishlist-message">
-                <a href="productscategories.php" class="btn-shop-products">Shop Products</a>
-            </div>
-
+            <?php endif; ?>
         </div>
     </div>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-<!-- Floating Cart & Wishlist Icons -->
-<div class="floating-icons">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#wishlistModal" title="Wishlist">
-        <i class="bi bi-heart"></i>
-    </a>
-    <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal" title="Shopping Cart">
-        <i class="bi bi-cart3"></i>
-    </a>
-</div>
+    <!-- Floating Icons -->
+    <div class="floating-icons">
+        <a href="wishlist.php" title="Wishlist">
+            <i class="bi bi-heart"></i>
+        </a>
+        <a href="cart.php" title="Shopping Cart">
+            <i class="bi bi-cart3"></i>
+        </a>
+    </div>
 
-<!-- Wishlist Modal -->
-<div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-end">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Your Wishlist</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            &copy; 2025 GlowCare Skincare. All rights reserved.
         </div>
-        <div class="modal-body">
-          <p>No items in wishlist.</p>
-          <!-- You can use PHP/JS here later to show dynamic content -->
-        </div>
-        <div class="modal-footer">
-          <a href="wishlist.php" class="btn btn-outline-primary">Edit Wishlist</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Cart Modal -->
-  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-end">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Your Cart</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <p>No items in cart.</p>
-          <!-- Replace this with dynamic product listing -->
-        </div>
-        <div class="modal-footer">
-          <a href="cart.php" class="btn btn-outline-primary">Edit Cart</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    </footer>
+
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Debug functions
+        function logDebug(message) {
+            const output = document.getElementById('debugOutput');
+            const timestamp = new Date().toLocaleTimeString();
+            output.innerHTML += `<div>[${timestamp}] ${message}</div>`;
+            output.scrollTop = output.scrollHeight;
+            console.log(`[${timestamp}] ${message}`);
+        }
+        
+        function toggleDebugConsole() {
+            const console = document.getElementById('debugConsole');
+            console.style.display = console.style.display === 'none' ? 'block' : 'none';
+        }
+        
+        // Function to show alert message
+        function showAlert(message, type = 'success') {
+            logDebug(`Alert: ${message} (${type})`);
+            const alert = document.getElementById('wishlistAlert');
+            alert.textContent = message;
+            alert.className = `alert alert-${type}`;
+            alert.style.display = 'block';
+            
+            // Hide after 3 seconds
+            setTimeout(() => {
+                alert.style.display = 'none';
+            }, 3000);
+        }
 
+        // Log that JS is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            logDebug('DOM fully loaded - JavaScript initialized');
+            logDebug('User login status: <?php echo isset($_SESSION['user_id']) ? 'Logged in (ID: '.$_SESSION['user_id'].')' : 'Not logged in'; ?>');
+        });
+        
+        // Function to add product to cart from wishlist
+        function addToCart(productId, productName) {
+            logDebug(`Adding product ID: ${productId} (${productName}) to cart`);
+            
+            const formData = new FormData();
+            formData.append('product_id', productId);
+            
+            fetch('cart_actions.php?action=add', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                logDebug(`Received response with status: ${response.status}`);
+                return response.text();
+            })
+            .then(data => {
+                logDebug(`Server response: "${data}"`);
+                
+                if (data.includes('added')) {
+                    showAlert(`${productName} added to cart successfully`, 'success');
+                } else if (data.includes('already_in_cart')) {
+                    showAlert(`${productName} is already in your cart`, 'info');
+                } else {
+                    showAlert(`Failed to add ${productName} to cart: ${data}`, 'danger');
+                }
+            })
+            .catch(error => {
+                logDebug(`Error occurred: ${error}`);
+                showAlert(`An error occurred: ${error}`, 'danger');
+            });
+        }
+        
+        // Function to remove product from wishlist
+        function removeFromWishlist(productId, productName) {
+            logDebug(`Removing product ID: ${productId} (${productName}) from wishlist`);
+            
+            const formData = new FormData();
+            formData.append('product_id', productId);
+            
+            fetch('wishlist_actions.php?action=remove', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                logDebug(`Received response with status: ${response.status}`);
+                return response.text();
+            })
+            .then(data => {
+                logDebug(`Server response: "${data}"`);
+                
+                if (data === 'removed') {
+                    // Remove the item from the DOM
+                    const itemElement = document.getElementById(`wishlist-item-${productId}`);
+                    if (itemElement) {
+                        itemElement.remove();
+                        
+                        // Check if wishlist is now empty
+                        const wishlistItems = document.querySelectorAll('.wishlist-item');
+                        if (wishlistItems.length === 0) {
+                            // Show empty wishlist message
+                            const wishlistContainer = document.querySelector('.wishlist-container');
+                            const emptyMessage = document.createElement('div');
+                            emptyMessage.className = 'empty-wishlist-message';
+                            emptyMessage.innerHTML = `
+                                <p>Your wishlist is empty.</p>
+                                <a href="products.php" class="btn-shop-products">Shop Products</a>
+                            `;
+                            wishlistContainer.innerHTML = '<h2 class="wishlist-title">Your Wishlist</h2>';
+                            wishlistContainer.appendChild(emptyMessage);
+                        }
+                    }
+                    
+                    showAlert(`${productName} removed from wishlist`, 'success');
+                } else {
+                    showAlert(`Failed to remove ${productName} from wishlist: ${data}`, 'danger');
+                }
+            })
+            .catch(error => {
+                logDebug(`Error occurred: ${error}`);
+                showAlert(`An error occurred: ${error}`, 'danger');
+            });
+        }
+    </script>
 </body>
-
 </html>

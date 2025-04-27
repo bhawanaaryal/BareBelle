@@ -2,17 +2,19 @@
 session_start(); // Start the session
 
 // Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "glowcare";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "barbie";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// // Check connection
+// if ($conn->connect_error) {
+//     die("Connection failed: " . $conn->connect_error);
+// }
+include 'db_connect.php';
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
@@ -142,10 +144,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
-          <li class="nav-item"><a class="nav-link active" href="login.php">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
         </ul>
       </div>
     </div>
@@ -167,7 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit" class="btn btn-primary" style="background-color: #9f5f80; border: none;">Login</button>
       </div>
       <div class="register-link">
-        Don't have an account? <a href="register.php">Register here</a>
+        Don't have an account? <a href="registration.php">Register here</a>
       </div>
     </form>
   </div>
