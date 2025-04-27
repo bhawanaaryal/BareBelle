@@ -300,7 +300,7 @@ if (!$cart_query) {
     <div class="total-section">
       Total: Rs. <span id="cartTotal"><?php echo number_format($total, 2); ?></span>
       <br>
-      <button class="checkout-btn mt-3" onclick="location.href='checkout.php'">Proceed to Checkout</button>
+      <button class="checkout-btn mt-3" onclick="location.href='place_order.php'">Proceed to Checkout</button>
     </div>
   </div>
   <?php else: ?>

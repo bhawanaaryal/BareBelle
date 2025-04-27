@@ -45,11 +45,27 @@ if (isset($_POST['place_order'])) {
         $stmt->bind_param("i", $user_id);
         $stmt->execute();
 
-        header("Location: home.php?message=order_placed");
+        // Store order details in session
+        $_SESSION['order'] = [
+            'order_id' => $order_id,
+            'payment_method' => 'Cash on Delivery',
+            'total_amount' => $total_amount
+        ];
+
+        $_SESSION['cart'] = $cart_items; // Save cart items array before clearing it from database
+
+        // Redirect to success page
+        header("Location: success.php");
         exit();
     } elseif ($payment_method == 'khalti') {
-        // Placeholder: redirect to Khalti payment page later
-        header("Location: khalti_payment.php?amount=$total_amount");
+        // Handle Khalti payment initiation
+        $_SESSION['order'] = [
+            'payment_method' => 'Khalti',
+            'total_amount' => $total_amount
+        ];
+
+        // Redirect to Khalti payment page
+        header("Location: khalti_proxy.php"); // You need to implement the khalti_proxy.php logic separately
         exit();
     }
 }
@@ -150,7 +166,7 @@ if (isset($_POST['place_order'])) {
     </div>
 
     <?php if (!empty($cart_items)): ?>
-        <form method="POST">
+        <form method="POST" id="placeOrderForm">
             <div class="payment-options">
                 <label>
                     <input type="radio" name="payment_method" value="cod" checked> Cash on Delivery
@@ -167,6 +183,50 @@ if (isset($_POST['place_order'])) {
 <footer>
     &copy; 2025 BareBelle. All rights reserved.
 </footer>
+
+<script>
+// Your proceedToCheckout function for Khalti payment
+function proceedToCheckout(total) { 
+    var now = new Date();
+    var formattedDate = now.getFullYear() + String(now.getMonth() + 1).padStart(2, '0') + String(now.getDate()).padStart(2, '0');
+    var randomChars = Math.random().toString(36).substring(2, 8).toUpperCase();
+    var orderName = 'BB-' + formattedDate + '-' + randomChars;
+
+    var formData = new FormData();
+    formData.append('amount', (total * 100).toString());
+    formData.append('purchase_order_id', 'order-' + Date.now());
+    formData.append('purchase_order_name', orderName);
+
+    fetch('khalti_proxy.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        if (data && data.payment_url) {
+            window.location.href = data.payment_url;
+        } else {
+            alert('Failed to initiate payment.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while initiating payment.');
+    });
+}
+
+// Handle form submission
+document.getElementById('placeOrderForm').addEventListener('submit', function(e) {
+    const selectedPaymentMethod = document.querySelector('input[name="payment_method"]:checked').value;
+
+    if (selectedPaymentMethod === 'khalti') {
+        e.preventDefault(); // STOP normal form submission
+        proceedToCheckout(<?php echo $total_amount; ?>); // Call your function with total
+    }
+    // Else (COD selected), let the form submit normally
+});
+</script>
 
 </body>
 </html>

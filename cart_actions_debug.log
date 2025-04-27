@@ -261,3 +261,406 @@ Insert query executed: Success
 Product added to cart successfully
 Database connection closed
 === End of request ===
+
+=== Cart Action Request at 2025-04-27 16:30:29 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 9
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 9
+Database connection status: Connected
+Attempting to add product 9 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-27 16:36:28 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 3
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 12
+)
+
+Database connection included
+User ID: 3
+Action: add
+Product ID: 12
+Database connection status: Connected
+Attempting to add product 12 to cart for user 3
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-27 16:37:51 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 3
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 3
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 3
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-27 16:39:54 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 3
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 3
+Action: add
+Product ID: 8
+Database connection status: Connected
+Attempting to add product 8 to cart for user 3
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-27 16:41:04 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 3
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 3
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 3
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-27 16:45:15 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 3
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 3
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to cart for user 3
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-27 16:47:44 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 3
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 11
+)
+
+Database connection included
+User ID: 3
+Action: add
+Product ID: 11
+Database connection status: Connected
+Attempting to add product 11 to cart for user 3
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-27 16:50:11 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 3
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 11
+            [payment_method] => Cash on Delivery
+            [total_amount] => 1822
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 10
+                    [user_id] => 3
+                    [product_id] => 11
+                    [quantity] => 1
+                    [name] => Bioderma Photoderm Max Spf 50+ Cream 40ml
+                    [price] => 1822.00
+                    [image] => product_images/biodermasun.jpg
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 3
+)
+
+Database connection included
+User ID: 3
+Action: add
+Product ID: 3
+Database connection status: Connected
+Attempting to add product 3 to cart for user 3
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-27 16:58:36 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 3
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 12
+            [payment_method] => Khalti
+            [total_amount] => 935
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 11
+                    [user_id] => 3
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => New User
+            [email] => newuser@barebelle.com
+            [phone] => 987654322
+            [address] => Kathmandu
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 10
+)
+
+Database connection included
+User ID: 3
+Action: add
+Product ID: 10
+Database connection status: Connected
+Attempting to add product 10 to cart for user 3
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-27 17:13:27 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 3
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 13
+            [payment_method] => Cash on Delivery
+            [total_amount] => 1846
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 11
+                    [user_id] => 3
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+            [1] => Array
+                (
+                    [id] => 12
+                    [user_id] => 3
+                    [product_id] => 10
+                    [quantity] => 1
+                    [name] => Aqualogica Glow+ Sunscreen 80g
+                    [price] => 911.00
+                    [image] => product_images/aqualogicasun.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => New User
+            [email] => newuser@barebelle.com
+            [phone] => 987654322
+            [address] => Kathmandu
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 3
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 3
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
