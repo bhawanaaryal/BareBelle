@@ -272,3 +272,140 @@ Delete query executed: Success
 Product removed from wishlist successfully
 Database connection closed
 === End of request ===
+
+=== Wishlist Action Request at 2025-04-27 18:39:18 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [id] => 1
+)
+
+Database connection included
+User ID: 1
+Action: 
+Product ID: 0
+ERROR: Invalid product ID
+
+=== Wishlist Action Request at 2025-04-27 18:39:35 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [id] => 5
+)
+
+Database connection included
+User ID: 1
+Action: 
+Product ID: 0
+ERROR: Invalid product ID
+
+=== Wishlist Action Request at 2025-04-27 18:47:22 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 1
+Action: 
+Product ID: 8
+Database connection status: Connected
+ERROR: Invalid action
+Database connection closed
+=== End of request ===
+
+=== Wishlist Action Request at 2025-04-27 18:48:09 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 8
+Database connection status: Connected
+Attempting to add product 8 to wishlist for user 1
+Check query executed: Success
+Product already in wishlist
+Database connection closed
+=== End of request ===
+
+=== Wishlist Action Request at 2025-04-27 18:48:15 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 7
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 7
+Database connection status: Connected
+Attempting to add product 7 to wishlist for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to wishlist successfully
+Database connection closed
+=== End of request ===

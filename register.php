@@ -171,7 +171,7 @@ $conn->close();
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
           <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
           <li class="nav-item"><a class="nav-link active" href="register.php">Register</a></li>

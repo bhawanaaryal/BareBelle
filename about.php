@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | GlowCare Skincare</title>
+  <title>About Us | BareBelle Skincare</title>
 
   <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -62,13 +62,13 @@
     <div class="row align-items-center">
       <!-- Image -->
       <div class="col-md-6 mb-4">
-        <img src="pics/download.jpeg" class="img-fluid rounded shadow about-image" alt="About GlowCare" />
+        <img src="pics/download.jpeg" class="img-fluid rounded shadow about-image" alt="About BareBelle" />
       </div>
 
       <!-- Text -->
       <div class="col-md-6">
         <p>
-          At <strong>GlowCare Skincare</strong>, we are passionate about helping you feel confident in your skin.
+          At <strong>BareBelle Skincare</strong>, we are passionate about helping you feel confident in your skin.
           Our brand was founded with one mission – to create clean, effective, and affordable skincare that celebrates natural beauty.
           Every product is made with love, tested for purity, and backed by real science.
         </p>
@@ -120,7 +120,7 @@
   <!-- Footer -->
   <footer class="bg-light py-3">
     <div class="container text-center">
-      &copy; 2025 GlowCare Skincare. All rights reserved.
+      &copy; 2025 BareBelle Skincare. All rights reserved.
     </div>
   </footer>
 

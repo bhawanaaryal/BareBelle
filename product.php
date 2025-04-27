@@ -115,6 +115,50 @@ $conn->close();
             background-color: #703f5d;
         }
 
+        .navbar {
+      background-color: #c3cfea;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #9f5f80;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .nav-link:hover {
+      color: #f8c8dc;
+    }
+    .floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.floating-icons a {
+    width: 50px;
+    height: 50px;
+    background-color: #f8c8dc;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.floating-icons a:hover {
+    background-color: #c3cfea;
+}
         footer {
             background-color: #f0f0f0;
             padding: 15px 0;
@@ -126,6 +170,47 @@ $conn->close();
     </style>
 </head>
 <body>
+       <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">BareBelle</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      
+      <!-- Search Form with Icon -->
+      <form class="d-flex me-3" action="search.php" method="GET">
+        <input class="form-control me-2" type="search" name="query" placeholder="Search..." aria-label="Search" style="width: 180px;">
+        <button class="btn btn-outline-secondary" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+
+      <!-- Navigation Links -->
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="productscategories.php">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+
+        <!-- Logout Button -->
+        <li class="nav-item ms-3">
+        <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="floating-icons">
+    <a href="wishlist.php" title="Wishlist">
+        <i class="bi bi-heart"></i>
+    </a>
+    <a href="cart.php" title="Shopping Cart">
+        <i class="bi bi-cart3"></i>
+    </a>
+</div>
 
     <!-- Product Details Section -->
     <div class="container product-container">
@@ -160,39 +245,47 @@ $conn->close();
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        $(document).ready(function(){
-            // Add to Cart
-            $('.add-to-cart').click(function(){
-                const productId = $(this).data('id');
-                $.ajax({
-                    url: 'add_to_cart.php',
-                    method: 'POST',
-                    data: { id: productId },
-                    success: function(response) {
-                        alert(response); // Display success/failure message
-                    },
-                    error: function() {
-                        alert("An error occurred while adding to cart.");
-                    }
-                });
-            });
-
-            // Add to Wishlist
-            $('.add-to-wishlist').click(function(){
-                const productId = $(this).data('id');
-                $.ajax({
-                    url: 'add_to_wishlist.php',
-                    method: 'POST',
-                    data: { id: productId },
-                    success: function(response) {
-                        alert(response); // Display success/failure message
-                    },
-                    error: function() {
-                        alert("An error occurred while adding to wishlist.");
-                    }
-                });
-            });
+$(document).ready(function() {
+    // Add to Cart
+    $('.add-to-cart').click(function() {
+        const productId = $(this).data('id');
+        $.ajax({
+            url: 'cart_actions.php', // Your cart actions PHP file
+            method: 'POST',
+            data: {
+                action: 'add', // Specify the action
+                product_id: productId // Send the product_id
+            },
+            success: function(response) {
+                console.log(response); // Log the server response for debugging
+                alert(response); // Display the response
+            },
+            error: function() {
+                alert("An error occurred while adding to cart.");
+            }
         });
+    });
+        // Add to Wishlist
+        $('.add-to-wishlist').click(function() {
+        const productId = $(this).data('id');
+        $.ajax({
+            url: 'wishlist_actions.php', // The PHP file that handles wishlist actions
+            method: 'POST',
+            data: {
+                action: 'add', // Specify the action to add to wishlist
+                product_id: productId // Send the product_id
+            },
+            success: function(response) {
+                console.log(response); // Log the server response for debugging
+                alert(response); // Display the response
+            },
+            error: function() {
+                alert("An error occurred while adding to wishlist.");
+            }
+        });
+    });
+});
+
     </script>
 </body>
 </html>

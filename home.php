@@ -18,10 +18,10 @@
 
 <!-- Floating Cart & Wishlist Icons -->
 <div class="floating-icons">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#wishlistModal" title="Wishlist">
+    <a href="wishlist.php" title="Wishlist">
         <i class="bi bi-heart"></i>
     </a>
-    <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal" title="Shopping Cart">
+    <a href="cart.php" title="Shopping Cart">
         <i class="bi bi-cart3"></i>
     </a>
 </div>
@@ -146,7 +146,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            &copy; 2025 GlowCare Skincare. All rights reserved.
+            &copy; 2025 BareBelle Skincare. All rights reserved.
         </div>
     </footer>
 

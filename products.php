@@ -290,27 +290,7 @@ footer {
   </div>
 </nav>
 
-      <div class="container">
-    <h2><?php echo ucfirst($category); ?></h2>
-    <div class="product-grid">
-      <?php if (count($products) > 0): ?>
-        <?php foreach ($products as $product): ?>
-          <div class="product-card">
-          <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" />
-          <h5><?php echo $product['name']; ?></h5>
-            <p class="price">Rs. <?php echo $product['price']; ?></p>
-            <div class="icons">
-              <i class="bi bi-cart-plus-fill" title="Add to Cart" onclick="addToCart(<?php echo $product['id']; ?>, '<?php echo addslashes($product['name']); ?>')"></i>
-              <i class="bi bi-heart-fill" title="Add to Wishlist" onclick="addToWishlist(<?php echo $product['id']; ?>, '<?php echo addslashes($product['name']); ?>')"></i>
-            </div>
-          </div>
-        <?php endforeach; ?>
-      <?php else: ?>
-        <p style="text-align:center;">No products found in this category.</p>
-      <?php endif; ?>
-    </div>
-  </div>
-  <!-- Floating Cart & Wishlist Icons -->
+<!-- This should be placed outside of the product grid -->
 <div class="floating-icons">
     <a href="wishlist.php" title="Wishlist">
         <i class="bi bi-heart"></i>
@@ -319,6 +299,30 @@ footer {
         <i class="bi bi-cart3"></i>
     </a>
 </div>
+
+<div class="container">
+    <h2><?php echo ucfirst($category); ?></h2>
+    <div class="product-grid">
+      <?php if (count($products) > 0): ?>
+        <?php foreach ($products as $product): ?>
+          <div class="product-card">
+            <a href="product.php?id=<?php echo $product['id']; ?>"> <!-- Link to individual product page -->
+              <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" />
+              <h5><?php echo $product['name']; ?></h5>
+              <p class="price">Rs. <?php echo $product['price']; ?></p>
+              <div class="icons">
+                <i class="bi bi-cart-plus-fill" title="Add to Cart" onclick="addToCart(<?php echo $product['id']; ?>, '<?php echo addslashes($product['name']); ?>')"></i>
+                <i class="bi bi-heart-fill" title="Add to Wishlist" onclick="addToWishlist(<?php echo $product['id']; ?>, '<?php echo addslashes($product['name']); ?>')"></i>
+              </div>
+            </a>
+          </div>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <p style="text-align:center;">No products found in this category.</p>
+      <?php endif; ?>
+    </div>
+</div>
+
 
 <!-- Wishlist Modal -->
 <div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
@@ -361,7 +365,7 @@ footer {
       <!-- Footer -->
       <footer>
         <div class="container">
-            &copy; 2025 GlowCare Skincare. All rights reserved.
+            &copy; 2025 BareBelle Skincare. All rights reserved.
         </div>
     </footer>
 

@@ -48,7 +48,7 @@ $user_id = $_SESSION['user_id'];
 fwrite($debug_log, "User ID: $user_id\n");
 
 // Get action
-$action = $_GET['action'] ?? '';
+$action = $_POST['action'] ?? ($_GET['action'] ?? ''); // Check POST first, then GET
 fwrite($debug_log, "Action: $action\n");
 
 // Get product id
