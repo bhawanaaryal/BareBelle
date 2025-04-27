@@ -119,3 +119,54 @@ Delete query executed: Success
 Product removed from cart successfully
 Database connection closed
 === End of request ===
+
+=== Cart Action Request at 2025-04-27 03:48:46 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 1
+)
+
+
+=== Cart Action Request at 2025-04-27 03:49:58 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 1
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 1
+Database connection status: Connected
+Attempting to add product 1 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===

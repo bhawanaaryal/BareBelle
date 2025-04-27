@@ -3,7 +3,7 @@ session_start(); // Start the session
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "barbie";
+$dbname = "glowcare";
 
 // Simple debug function that doesn't require an external file
 function debug_log($message, $level = 'INFO') {
