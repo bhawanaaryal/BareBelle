@@ -1,14 +1,26 @@
 <?php
 session_start();
+include 'db_connect.php'; // Ensure to include the database connection
 
-// Check if order details and user details are available
+// Check if order details and user details are available in session
 if (isset($_SESSION['order']) && isset($_SESSION['user_details']) && isset($_SESSION['order']['order_id'])) {
     $order = $_SESSION['order'];
     $user_details = $_SESSION['user_details'];
     $total_price = $order['total_amount'];
 
     // Fetch cart items from the session
-    $cart_items = $_SESSION['cart'];  // Fetch from session
+    if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+        $cart_items = $_SESSION['cart'];  // Fetch from session
+    } else {
+        // If cart items are not available in session (cart was cleared), fetch from the database
+        $user_id = $_SESSION['user_id'];  // Assuming user_id is stored in session
+        $stmt = $conn->prepare("SELECT cart.*, products.name, products.price, products.image FROM cart 
+            JOIN products ON cart.product_id = products.id WHERE cart.user_id = ?");
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $cart_items = $result->fetch_all(MYSQLI_ASSOC);
+    }
 } else {
     // If session data is not available, redirect to the cart or homepage
     header("Location: cart.php");

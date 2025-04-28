@@ -888,3 +888,2681 @@ Insert query executed: Success
 Product added to cart successfully
 Database connection closed
 === End of request ===
+
+=== Cart Action Request at 2025-04-27 20:06:23 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 14
+                    [user_id] => 1
+                    [product_id] => 5
+                    [quantity] => 1
+                    [name] => Nature Derma 1% Moisturizer With Subligana - 50 Ml
+                    [price] => 1039.00
+                    [image] => product_images/naturemoist.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 15
+                    [user_id] => 1
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+            [2] => Array
+                (
+                    [id] => 16
+                    [user_id] => 1
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+            [3] => Array
+                (
+                    [id] => 17
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 14
+            [payment_method] => Khalti
+            [total_amount] => 2868
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 9
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 9
+Database connection status: Connected
+Attempting to add product 9 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 03:51:06 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 2
+    [username] => 
+    [role] => admin
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 14
+                    [user_id] => 1
+                    [product_id] => 5
+                    [quantity] => 1
+                    [name] => Nature Derma 1% Moisturizer With Subligana - 50 Ml
+                    [price] => 1039.00
+                    [image] => product_images/naturemoist.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 15
+                    [user_id] => 1
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+            [2] => Array
+                (
+                    [id] => 16
+                    [user_id] => 1
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+            [3] => Array
+                (
+                    [id] => 17
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 14
+            [payment_method] => Khalti
+            [total_amount] => 2868
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 2
+)
+
+Database connection included
+User ID: 2
+Action: add
+Product ID: 2
+Database connection status: Connected
+Attempting to add product 2 to cart for user 2
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 03:51:08 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 2
+    [username] => 
+    [role] => admin
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 14
+                    [user_id] => 1
+                    [product_id] => 5
+                    [quantity] => 1
+                    [name] => Nature Derma 1% Moisturizer With Subligana - 50 Ml
+                    [price] => 1039.00
+                    [image] => product_images/naturemoist.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 15
+                    [user_id] => 1
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+            [2] => Array
+                (
+                    [id] => 16
+                    [user_id] => 1
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+            [3] => Array
+                (
+                    [id] => 17
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 14
+            [payment_method] => Khalti
+            [total_amount] => 2868
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 2
+)
+
+Database connection included
+User ID: 2
+Action: add
+Product ID: 2
+Database connection status: Connected
+Attempting to add product 2 to cart for user 2
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 04:09:32 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 2
+    [username] => 
+    [role] => admin
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 14
+                    [user_id] => 1
+                    [product_id] => 5
+                    [quantity] => 1
+                    [name] => Nature Derma 1% Moisturizer With Subligana - 50 Ml
+                    [price] => 1039.00
+                    [image] => product_images/naturemoist.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 15
+                    [user_id] => 1
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+            [2] => Array
+                (
+                    [id] => 16
+                    [user_id] => 1
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+            [3] => Array
+                (
+                    [id] => 17
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 14
+            [payment_method] => Khalti
+            [total_amount] => 2868
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => update
+)
+
+POST data: Array
+(
+    [product_id] => 2
+    [quantity] => 2
+)
+
+Database connection included
+User ID: 2
+Action: update
+Product ID: 2
+Database connection status: Connected
+Attempting to update product 2 quantity to 2 for user 2
+Update query executed: Success
+Product quantity updated successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 04:38:32 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 14
+                    [user_id] => 1
+                    [product_id] => 5
+                    [quantity] => 1
+                    [name] => Nature Derma 1% Moisturizer With Subligana - 50 Ml
+                    [price] => 1039.00
+                    [image] => product_images/naturemoist.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 15
+                    [user_id] => 1
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+            [2] => Array
+                (
+                    [id] => 16
+                    [user_id] => 1
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+            [3] => Array
+                (
+                    [id] => 17
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 14
+            [payment_method] => Khalti
+            [total_amount] => 2868
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 1
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 04:38:39 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 14
+                    [user_id] => 1
+                    [product_id] => 5
+                    [quantity] => 1
+                    [name] => Nature Derma 1% Moisturizer With Subligana - 50 Ml
+                    [price] => 1039.00
+                    [image] => product_images/naturemoist.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 15
+                    [user_id] => 1
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+            [2] => Array
+                (
+                    [id] => 16
+                    [user_id] => 1
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+            [3] => Array
+                (
+                    [id] => 17
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 14
+            [payment_method] => Khalti
+            [total_amount] => 2868
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 12
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 12
+Database connection status: Connected
+Attempting to add product 12 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 04:56:46 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 2
+    [username] => 
+    [role] => admin
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 14
+                    [user_id] => 1
+                    [product_id] => 5
+                    [quantity] => 1
+                    [name] => Nature Derma 1% Moisturizer With Subligana - 50 Ml
+                    [price] => 1040.00
+                    [image] => product_images/naturemoist.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 15
+                    [user_id] => 1
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+            [2] => Array
+                (
+                    [id] => 16
+                    [user_id] => 1
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+            [3] => Array
+                (
+                    [id] => 17
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+            [4] => Array
+                (
+                    [id] => 18
+                    [user_id] => 1
+                    [product_id] => 9
+                    [quantity] => 1
+                    [name] => Beauty Of Joseon Spf 50 Relief Sun Cream: Rice + Probiotics - 50ml
+                    [price] => 2090.00
+                    [image] => product_images/beautyofjoseonsun.JPG
+                )
+
+            [5] => Array
+                (
+                    [id] => 20
+                    [user_id] => 1
+                    [product_id] => 12
+                    [quantity] => 1
+                    [name] => Sunscoop Glow Even Tone Tinted Sunscreen Spf 50 Pa++++, 45g
+                    [price] => 950.00
+                    [image] => product_images/sunscoop.JPG
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 15
+            [payment_method] => Cash on Delivery
+            [total_amount] => 5909
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 2
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 2
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 05:00:37 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 2
+    [username] => 
+    [role] => admin
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 19
+                    [user_id] => 2
+                    [product_id] => 2
+                    [quantity] => 2
+                    [name] => Fixderma Durave Moisturizer Deep Hydration Face Moisturizer - 50g
+                    [price] => 475.00
+                    [image] => product_images/fixdermamoist.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 21
+                    [user_id] => 2
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 16
+            [payment_method] => Khalti
+            [total_amount] => 1545
+        )
+
+    [user_details] => Array
+        (
+            [name] => Admin
+            [email] => admin@glowcare.com
+            [phone] => 9876543210
+            [address] => Head Office
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 10
+)
+
+Database connection included
+User ID: 2
+Action: add
+Product ID: 10
+Database connection status: Connected
+Attempting to add product 10 to cart for user 2
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 05:07:04 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 2
+    [username] => 
+    [role] => admin
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 19
+                    [user_id] => 2
+                    [product_id] => 2
+                    [quantity] => 2
+                    [name] => Fixderma Durave Moisturizer Deep Hydration Face Moisturizer - 50g
+                    [price] => 475.00
+                    [image] => product_images/fixdermamoist.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 21
+                    [user_id] => 2
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+            [2] => Array
+                (
+                    [id] => 22
+                    [user_id] => 2
+                    [product_id] => 10
+                    [quantity] => 1
+                    [name] => Aqualogica Glow+ Sunscreen 80g
+                    [price] => 911.00
+                    [image] => product_images/aqualogicasun.JPG
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 18
+            [payment_method] => Cash on Delivery
+            [total_amount] => 2456
+        )
+
+    [user_details] => Array
+        (
+            [name] => Admin
+            [email] => admin@glowcare.com
+            [phone] => 9876543210
+            [address] => Head Office
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 2
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to cart for user 2
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 11:49:01 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 2
+    [username] => 
+    [role] => admin
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 23
+                    [user_id] => 2
+                    [product_id] => 6
+                    [quantity] => 1
+                    [name] => Dot & Key Watermelon Moisturizer- 60 Ml
+                    [price] => 752.00
+                    [image] => product_images/dotandkeymoist.JPG
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 19
+            [payment_method] => Khalti
+            [total_amount] => 752
+        )
+
+    [user_details] => Array
+        (
+            [name] => Admin
+            [email] => admin@glowcare.com
+            [phone] => 9876543210
+            [address] => Head Office
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 2
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to cart for user 2
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 11:52:04 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 12:08:49 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 24
+            [payment_method] => Cash on Delivery
+            [total_amount] => 752
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 24
+                    [user_id] => 1
+                    [product_id] => 6
+                    [quantity] => 1
+                    [name] => Dot & Key Watermelon Moisturizer- 60 Ml
+                    [price] => 752.00
+                    [image] => product_images/dotandkeymoist.JPG
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 10
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 10
+Database connection status: Connected
+Attempting to add product 10 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 12:09:48 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 25
+            [payment_method] => Cash on Delivery
+            [total_amount] => 911
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 25
+                    [user_id] => 1
+                    [product_id] => 10
+                    [quantity] => 1
+                    [name] => Aqualogica Glow+ Sunscreen 80g
+                    [price] => 911.00
+                    [image] => product_images/aqualogicasun.JPG
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 10
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 10
+Database connection status: Connected
+Attempting to add product 10 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 12:11:25 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 27
+            [payment_method] => Cash on Delivery
+            [total_amount] => 0
+        )
+
+    [cart] => Array
+        (
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 12
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 12
+Database connection status: Connected
+Attempting to add product 12 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 12:18:07 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 28
+            [payment_method] => Cash on Delivery
+            [total_amount] => 950
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 27
+                    [user_id] => 1
+                    [product_id] => 12
+                    [quantity] => 1
+                    [name] => Sunscoop Glow Even Tone Tinted Sunscreen Spf 50 Pa++++, 45g
+                    [price] => 950.00
+                    [image] => product_images/sunscoop.JPG
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 8
+Database connection status: Connected
+Attempting to add product 8 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 12:31:40 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 31
+            [payment_method] => Cash on Delivery
+            [total_amount] => 1125
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 28
+                    [user_id] => 1
+                    [product_id] => 8
+                    [quantity] => 1
+                    [name] => Uv Doux Sunscreen Gel, Spf 50+, 50gm
+                    [price] => 1125.00
+                    [image] => product_images/uvdouxsun.JPG
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 8
+Database connection status: Connected
+Attempting to add product 8 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 12:32:00 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 32
+            [payment_method] => Khalti
+            [total_amount] => 1125
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 29
+                    [user_id] => 1
+                    [product_id] => 8
+                    [quantity] => 1
+                    [name] => Uv Doux Sunscreen Gel, Spf 50+, 50gm
+                    [price] => 1125.00
+                    [image] => product_images/uvdouxsun.JPG
+                )
+
+        )
+
+    [user_details] => 
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 8
+Database connection status: Connected
+Attempting to add product 8 to cart for user 1
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 12:34:39 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 34
+            [payment_method] => Cash on Delivery
+            [total_amount] => 1125
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 29
+                    [user_id] => 1
+                    [product_id] => 8
+                    [quantity] => 1
+                    [name] => Uv Doux Sunscreen Gel, Spf 50+, 50gm
+                    [price] => 1125.00
+                    [image] => product_images/uvdouxsun.JPG
+                )
+
+        )
+
+    [user_details] => 
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 8
+Database connection status: Connected
+Attempting to add product 8 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 12:36:55 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 35
+            [payment_method] => Cash on Delivery
+            [total_amount] => 1125
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 30
+                    [user_id] => 1
+                    [product_id] => 8
+                    [quantity] => 1
+                    [name] => Uv Doux Sunscreen Gel, Spf 50+, 50gm
+                    [price] => 1125.00
+                    [image] => product_images/uvdouxsun.JPG
+                )
+
+        )
+
+    [user_details] => 
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 8
+Database connection status: Connected
+Attempting to add product 8 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:00:56 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 36
+            [payment_method] => Cash on Delivery
+            [total_amount] => 1125
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 31
+                    [user_id] => 1
+                    [product_id] => 8
+                    [quantity] => 1
+                    [name] => Uv Doux Sunscreen Gel, Spf 50+, 50gm
+                    [price] => 1125.00
+                    [image] => product_images/uvdouxsun.JPG
+                )
+
+        )
+
+    [user_details] => 
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 5
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 5
+Database connection status: Connected
+Attempting to add product 5 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:07:31 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 37
+            [total_amount] => 1040
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 32
+                    [quantity] => 1
+                    [product_id] => 5
+                    [name] => Nature Derma 1% Moisturizer With Subligana - 50 Ml
+                    [price] => 1040.00
+                    [image] => product_images/naturemoist.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 7
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 7
+Database connection status: Connected
+Attempting to add product 7 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:08:21 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 38
+            [total_amount] => 1062
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 33
+                    [quantity] => 1
+                    [product_id] => 7
+                    [name] => The Derma Co Ultra Light Zinc Mineral Sunscreen- 50g
+                    [price] => 1062.00
+                    [image] => product_images/dermaco.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 7
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 7
+Database connection status: Connected
+Attempting to add product 7 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:10:44 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 39
+            [total_amount] => 1062
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 34
+                    [quantity] => 1
+                    [product_id] => 7
+                    [name] => The Derma Co Ultra Light Zinc Mineral Sunscreen- 50g
+                    [price] => 1062.00
+                    [image] => product_images/dermaco.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 3
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 3
+Database connection status: Connected
+Attempting to add product 3 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:12:48 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 40
+            [total_amount] => 935
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 35
+                    [quantity] => 1
+                    [product_id] => 3
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 3
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 3
+Database connection status: Connected
+Attempting to add product 3 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:17:21 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 41
+            [total_amount] => 935
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 36
+                    [quantity] => 1
+                    [product_id] => 3
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 1
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 1
+Database connection status: Connected
+Attempting to add product 1 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:18:19 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 42
+            [total_amount] => 299
+            [payment_method] => cod
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 37
+                    [quantity] => 1
+                    [product_id] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 9
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 9
+Database connection status: Connected
+Attempting to add product 9 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:18:22 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 42
+            [total_amount] => 299
+            [payment_method] => cod
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 37
+                    [quantity] => 1
+                    [product_id] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 9
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 9
+Database connection status: Connected
+Attempting to add product 9 to cart for user 1
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:22:24 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 43
+            [total_amount] => 2090
+            [payment_method] => khalti
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 38
+                    [quantity] => 1
+                    [product_id] => 9
+                    [name] => Beauty Of Joseon Spf 50 Relief Sun Cream: Rice + Probiotics - 50ml
+                    [price] => 2090.00
+                    [image] => product_images/beautyofjoseonsun.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 9
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 9
+Database connection status: Connected
+Attempting to add product 9 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:27:15 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 44
+            [payment_method] => Khalti
+            [total_amount] => 2090
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 39
+                    [user_id] => 1
+                    [product_id] => 9
+                    [quantity] => 1
+                    [name] => Beauty Of Joseon Spf 50 Relief Sun Cream: Rice + Probiotics - 50ml
+                    [price] => 2090.00
+                    [image] => product_images/beautyofjoseonsun.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 9
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 9
+Database connection status: Connected
+Attempting to add product 9 to cart for user 1
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:28:20 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 45
+            [payment_method] => Khalti
+            [total_amount] => 2090
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 39
+                    [user_id] => 1
+                    [product_id] => 9
+                    [quantity] => 1
+                    [name] => Beauty Of Joseon Spf 50 Relief Sun Cream: Rice + Probiotics - 50ml
+                    [price] => 2090.00
+                    [image] => product_images/beautyofjoseonsun.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 11
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 11
+Database connection status: Connected
+Attempting to add product 11 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:35:04 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 47
+            [payment_method] => Khalti
+            [total_amount] => 3912
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 12
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 12
+Database connection status: Connected
+Attempting to add product 12 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:38:00 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 47
+            [payment_method] => Khalti
+            [total_amount] => 3912
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 5
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 5
+Database connection status: Connected
+Attempting to add product 5 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:38:57 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 48
+            [payment_method] => Khalti
+            [total_amount] => 1990
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 5
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 5
+Database connection status: Connected
+Attempting to add product 5 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:39:22 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 49
+            [payment_method] => Cash on Delivery
+            [total_amount] => 1040
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 43
+                    [user_id] => 1
+                    [product_id] => 5
+                    [quantity] => 1
+                    [name] => Nature Derma 1% Moisturizer With Subligana - 50 Ml
+                    [price] => 1040.00
+                    [image] => product_images/naturemoist.jpg
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 5
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 5
+Database connection status: Connected
+Attempting to add product 5 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:41:29 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 50
+            [payment_method] => Cash on Delivery
+            [total_amount] => 1040
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 44
+                    [user_id] => 1
+                    [product_id] => 5
+                    [quantity] => 1
+                    [name] => Nature Derma 1% Moisturizer With Subligana - 50 Ml
+                    [price] => 1040.00
+                    [image] => product_images/naturemoist.jpg
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 5
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 5
+Database connection status: Connected
+Attempting to add product 5 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:46:51 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 7
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 7
+Database connection status: Connected
+Attempting to add product 7 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:48:15 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 53
+            [payment_method] => Cash on Delivery
+            [total_amount] => 1062
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 46
+                    [user_id] => 1
+                    [product_id] => 7
+                    [quantity] => 1
+                    [name] => The Derma Co Ultra Light Zinc Mineral Sunscreen- 50g
+                    [price] => 1062.00
+                    [image] => product_images/dermaco.jpg
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 1
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 1
+Database connection status: Connected
+Attempting to add product 1 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:49:01 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 54
+            [payment_method] => Cash on Delivery
+            [total_amount] => 299
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 47
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 3
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 3
+Database connection status: Connected
+Attempting to add product 3 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:49:29 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 56
+            [payment_method] => Cash on Delivery
+            [total_amount] => 0
+        )
+
+    [cart] => Array
+        (
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 2
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 2
+Database connection status: Connected
+Attempting to add product 2 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:50:03 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 57
+            [total_amount] => 475
+            [payment_method] => cod
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [quantity] => 1
+                    [product_id] => 2
+                    [name] => Fixderma Durave Moisturizer Deep Hydration Face Moisturizer - 50g
+                    [price] => 475.00
+                    [image] => product_images/fixdermamoist.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:50:38 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 57
+            [total_amount] => 475
+            [payment_method] => cod
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [quantity] => 1
+                    [product_id] => 2
+                    [name] => Fixderma Durave Moisturizer Deep Hydration Face Moisturizer - 50g
+                    [price] => 475.00
+                    [image] => product_images/fixdermamoist.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 3
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 3
+Database connection status: Connected
+Attempting to add product 3 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:53:54 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 58
+            [total_amount] => 1530
+            [payment_method] => cod
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 50
+                    [quantity] => 1
+                    [product_id] => 4
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+            [1] => Array
+                (
+                    [id] => 51
+                    [quantity] => 1
+                    [product_id] => 3
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 2
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 2
+Database connection status: Connected
+Attempting to add product 2 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-04-28 13:54:29 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [order] => Array
+        (
+            [order_id] => 59
+            [payment_method] => Cash on Delivery
+            [total_amount] => 475
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 52
+                    [user_id] => 1
+                    [product_id] => 2
+                    [quantity] => 1
+                    [name] => Fixderma Durave Moisturizer Deep Hydration Face Moisturizer - 50g
+                    [price] => 475.00
+                    [image] => product_images/fixdermamoist.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [address] => Dhapasi
+            [phone] => 9808116991
+            [email] => aryalbhawana2003@gmail.com
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 2
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 2
+Database connection status: Connected
+Attempting to add product 2 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===

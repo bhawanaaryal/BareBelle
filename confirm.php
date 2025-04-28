@@ -40,15 +40,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute();
         $order_id = $conn->insert_id;
 
-        // Insert each item into order_items
+        // Insert each item into order_items and update product quantities
         foreach ($cart_items as $item) {
+            // Insert order item
             $stmt = $conn->prepare("INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("iiid", $order_id, $item['product_id'], $item['quantity'], $item['price']);
             $stmt->execute();
+
+            // Decrease product quantity in the products table
+            $update_product_query = "UPDATE products SET quantity = quantity - ? WHERE id = ?";
+            $update_stmt = $conn->prepare($update_product_query);
+            $update_stmt->bind_param("ii", $item['quantity'], $item['product_id']);
+            $update_stmt->execute();
         }
 
-        // Clear cart (don't do this yet, instead store cart items for use in the success page)
-        $_SESSION['cart'] = $cart_items;  // Store cart items in the session
+        // Clear cart from session
+        unset($_SESSION['cart']);  // Remove cart from session
+
+        // Clear cart from database (optional but good practice)
+        $delete_cart_query = "DELETE FROM cart WHERE user_id = ?";
+        $delete_cart_stmt = $conn->prepare($delete_cart_query);
+        $delete_cart_stmt->bind_param("i", $user_id);
+        $delete_cart_stmt->execute();
 
         // Store order and user details in session
         $_SESSION['order'] = [
@@ -69,7 +82,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
 
 
 <!DOCTYPE html>

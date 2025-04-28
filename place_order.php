@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db_connect.php'; // your database connection file
+include 'db_connect.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
@@ -22,54 +22,69 @@ foreach ($cart_items as $item) {
     $total_amount += $item['price'] * $item['quantity'];
 }
 
-// Handle place order
+// If cart empty, redirect to cart
+if (empty($cart_items)) {
+    header("Location: cart.php");
+    exit();
+}
+
+// Ensure total_amount is available for the order form
+if (!isset($total_amount) || $total_amount <= 0) {
+    die("Error: Total amount calculation failed.");
+}
+
+// Handle form submit
 if (isset($_POST['place_order'])) {
     $payment_method = $_POST['payment_method'];
 
     if ($payment_method == 'cod') {
-        // Insert into orders
+        // Place the order immediately for COD
         $stmt = $conn->prepare("INSERT INTO orders (user_id, total_amount, status) VALUES (?, ?, 'Pending')");
         $stmt->bind_param("id", $user_id, $total_amount);
         $stmt->execute();
         $order_id = $conn->insert_id;
 
-        // Insert each item into order_items
+        // Insert each cart item into order_items
         foreach ($cart_items as $item) {
             $stmt = $conn->prepare("INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("iiid", $order_id, $item['product_id'], $item['quantity'], $item['price']);
             $stmt->execute();
         }
 
-        // Clear cart
+        // Clear user's cart
         $stmt = $conn->prepare("DELETE FROM cart WHERE user_id = ?");
         $stmt->bind_param("i", $user_id);
         $stmt->execute();
 
-        // Store order details in session
+        // Save order details into session
         $_SESSION['order'] = [
             'order_id' => $order_id,
             'payment_method' => 'Cash on Delivery',
             'total_amount' => $total_amount
         ];
-
-        $_SESSION['cart'] = $cart_items; // Save cart items array before clearing it from database
+        $_SESSION['cart'] = $cart_items;
 
         // Redirect to success page
         header("Location: success.php");
         exit();
+
     } elseif ($payment_method == 'khalti') {
-        // Handle Khalti payment initiation
+        // For Khalti, just initiate the payment (don't insert order yet)
+
         $_SESSION['order'] = [
             'payment_method' => 'Khalti',
             'total_amount' => $total_amount
         ];
+        $_SESSION['cart'] = $cart_items;
 
-        // Redirect to Khalti payment page
-        header("Location: khalti_proxy.php"); // You need to implement the khalti_proxy.php logic separately
+        // Redirect to Khalti payment proxy page
+        header("Location: khalti_proxy.php");
         exit();
     }
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
