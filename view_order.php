@@ -1,16 +1,55 @@
 <?php
 session_start();
 
+// Check if admin is logged in
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    // Redirect to login page or show an error message
     header("Location: login.php");
     exit();
 }
-// Connect to database
-$conn = new mysqli('localhost', 'root', '', 'glowcare'); // Change 'your_database_name' to your DB
 
+// Database connection
+$conn = new mysqli('localhost', 'root', '', 'glowcare');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
+}
+
+// Handle AJAX Requests for Marking as Completed and Deleting Orders
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['action'])) {
+        $order_id = $_POST['order_id'];
+
+        if ($_POST['action'] == 'mark_completed') {
+            // Mark Order as Completed
+            $stmt = $conn->prepare("UPDATE orders SET status = 'Completed' WHERE id = ?");
+            $stmt->bind_param("i", $order_id);
+            if ($stmt->execute()) {
+                echo 'success';
+            } else {
+                echo 'error';
+            }
+            $stmt->close();
+        } elseif ($_POST['action'] == 'cancel_order') {
+            // Delete Related Order Items First
+            $stmt_items = $conn->prepare("DELETE FROM order_items WHERE order_id = ?");
+            $stmt_items->bind_param("i", $order_id);
+            if (!$stmt_items->execute()) {
+                echo 'Failed to delete order items';
+                exit();
+            }
+            $stmt_items->close();
+
+            // Now, delete the order itself
+            $stmt_order = $conn->prepare("DELETE FROM orders WHERE id = ?");
+            $stmt_order->bind_param("i", $order_id);
+            if ($stmt_order->execute()) {
+                echo 'success';
+            } else {
+                echo 'Failed to delete order';
+            }
+            $stmt_order->close();
+        }
+    }
+    exit(); // Prevent further page loading if it's an AJAX request
 }
 
 // Fetch orders with customer names
@@ -20,6 +59,7 @@ $sql = "SELECT o.id AS order_id, u.name AS customer_name, o.total_amount, o.stat
 
 $result = $conn->query($sql);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -125,10 +165,10 @@ $result = $conn->query($sql);
               </td>
               <td>
                 <?php if ($order['status'] == 'Pending'): ?>
-                  <button class="btn btn-sm btn-complete">Mark as Completed</button>
-                  <button class="btn btn-sm btn-cancel">Cancel</button>
+                  <button class="btn btn-sm btn-complete" data-order-id="<?php echo $order['order_id']; ?>">Mark as Completed</button>
+                  <button class="btn btn-sm btn-cancel" data-order-id="<?php echo $order['order_id']; ?>">Cancel</button>
                 <?php else: ?>
-                  <button class="btn btn-sm btn-cancel">Delete</button>
+                  <button class="btn btn-sm btn-cancel" data-order-id="<?php echo $order['order_id']; ?>">Delete</button>
                 <?php endif; ?>
               </td>
             </tr>
@@ -142,18 +182,45 @@ $result = $conn->query($sql);
 </div>
 
 <script>
+  // Handle "Mark as Completed" button click using AJAX
   document.querySelectorAll('.btn-complete').forEach(btn => {
     btn.addEventListener('click', function () {
-      const row = this.closest('tr');
-      row.querySelector('td:nth-child(4)').innerHTML = '<span class="badge bg-success">Completed</span>';
+        const orderId = this.getAttribute('data-order-id');
+        
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '', true); // Use the current page for the request
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function () {
+            if (xhr.status == 200 && xhr.responseText == 'success') {
+                alert('Order marked as completed!');
+                location.reload(); // Reload to reflect changes
+            } else {
+                alert('Failed to mark order as completed!');
+            }
+        };
+        xhr.send('action=mark_completed&order_id=' + orderId);
     });
   });
 
+  // Handle "Cancel" button click using AJAX
   document.querySelectorAll('.btn-cancel').forEach(btn => {
     btn.addEventListener('click', function () {
-      if (confirm("Are you sure you want to cancel/delete this order?")) {
-        this.closest('tr').remove();
-      }
+        if (confirm("Are you sure you want to cancel/delete this order?")) {
+            const orderId = this.getAttribute('data-order-id');
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '', true); // Use the current page for the request
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function () {
+                if (xhr.status == 200 && xhr.responseText == 'success') {
+                    alert('Order cancelled/deleted successfully!');
+                    location.reload(); // Reload to reflect changes
+                } else {
+                    alert('Failed to cancel/delete order!');
+                }
+            };
+            xhr.send('action=cancel_order&order_id=' + orderId);
+        }
     });
   });
 </script>
