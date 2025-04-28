@@ -3,14 +3,34 @@
 session_start();
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    // Redirect to login page or show an error message
-    header("Location: login.php");
+    header("Location: login.php"); 
     exit();
 }
-$conn = new mysqli('localhost', 'root', '', 'glowcare'); // update credentials if needed
+$conn = new mysqli('localhost', 'root', '', 'glowcare');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
+}
+
+// Save edited products if form submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_all'])) {
+    foreach ($_POST['name'] as $id => $name) {
+        $name = $conn->real_escape_string($name);
+        $category = $conn->real_escape_string($_POST['category'][$id]);
+        $quantity = intval($_POST['quantity'][$id]);
+        $price = floatval($_POST['price'][$id]);
+
+        $update_sql = "UPDATE products SET 
+            name = '$name', 
+            category = '$category', 
+            quantity = $quantity, 
+            price = $price 
+            WHERE id = $id";
+
+        $conn->query($update_sql);
+    }
+    header("Location: manage_products.php"); // Refresh page after saving
+    exit();
 }
 
 // Fetch products
@@ -22,7 +42,7 @@ $result = $conn->query($sql);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manage Products - BareBelle </title>
+    <title>Manage Products - BareBelle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CDN -->
@@ -32,7 +52,6 @@ $result = $conn->query($sql);
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
     <style>
-        /* Your existing CSS here */
         body {
             font-family: 'Quicksand', sans-serif;
             background: linear-gradient(135deg, #c3cfea, #f8c8dc);
@@ -55,16 +74,16 @@ $result = $conn->query($sql);
         .table td, .table th {
             vertical-align: middle;
         }
-        .btn-edit {
-            background-color: #f8c8dc;
-            color: #333;
+        .btn-save {
+            background-color: #9f5f80;
+            color: white;
+        }
+        .btn-save:hover {
+            background-color: #854c6e;
         }
         .btn-delete {
             background-color: #ff6b6b;
             color: white;
-        }
-        .btn-edit:hover {
-            background-color: #e4acc2;
         }
         .btn-delete:hover {
             background-color: #e95b5b;
@@ -73,7 +92,7 @@ $result = $conn->query($sql);
 </head>
 <body>
 
-<!-- Your navbar here -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">BareBelle Admin</a>
@@ -97,43 +116,56 @@ $result = $conn->query($sql);
 <div class="container">
     <div class="title">Manage Products</div>
 
-    <div class="table-responsive">
-        <table class="table table-bordered table-striped align-middle bg-white shadow">
-            <thead class="table-light">
-                <tr>
-                    <th>Image</th>
-                    <th>Product Name</th>
-                    <th>Category</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th style="width: 160px;">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if ($result->num_rows > 0): ?>
-                    <?php while ($row = $result->fetch_assoc()): ?>
-                        <tr>
-                            <td>
-                                <img src="<?php echo htmlspecialchars($row['image']); ?>" alt="Product Image">
-                            </td>
-                            <td><?php echo htmlspecialchars($row['name']); ?></td>
-                            <td><?php echo htmlspecialchars($row['category']); ?></td>
-                            <td><?php echo htmlspecialchars($row['quantity']); ?></td>
-                            <td>Rs. <?php echo htmlspecialchars($row['price']); ?></td>
-                            <td>
-                                <a href="edit_product.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-edit">Edit</a>
-                                <a href="delete_product.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-delete" onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>
-                            </td>
-                        </tr>
-                    <?php endwhile; ?>
-                <?php else: ?>
+    <form method="POST" action="manage_products.php">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle bg-white shadow">
+                <thead class="table-light">
                     <tr>
-                        <td colspan="6" class="text-center">No products found.</td>
+                        <th>Image</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price (Rs.)</th>
+                        <th style="width: 160px;">Actions</th>
                     </tr>
-                <?php endif; ?>
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody>
+                    <?php if ($result->num_rows > 0): ?>
+                        <?php while ($row = $result->fetch_assoc()): ?>
+                            <tr>
+                                <td>
+                                    <img src="<?php echo htmlspecialchars($row['image']); ?>" alt="Product Image">
+                                </td>
+                                <td>
+                                    <input type="text" name="name[<?php echo $row['id']; ?>]" value="<?php echo htmlspecialchars($row['name']); ?>" class="form-control" required>
+                                </td>
+                                <td>
+                                    <input type="text" name="category[<?php echo $row['id']; ?>]" value="<?php echo htmlspecialchars($row['category']); ?>" class="form-control" required>
+                                </td>
+                                <td>
+                                    <input type="number" name="quantity[<?php echo $row['id']; ?>]" value="<?php echo htmlspecialchars($row['quantity']); ?>" class="form-control" required>
+                                </td>
+                                <td>
+                                    <input type="number" step="0.01" name="price[<?php echo $row['id']; ?>]" value="<?php echo htmlspecialchars($row['price']); ?>" class="form-control" required>
+                                </td>
+                                <td>
+                                    <a href="delete_product.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-delete" onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>
+                                </td>
+                            </tr>
+                        <?php endwhile; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="6" class="text-center">No products found.</td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="submit" name="save_all" class="btn btn-save">Save Changes</button>
+        </div>
+    </form>
 </div>
 
 <!-- Bootstrap JS -->
