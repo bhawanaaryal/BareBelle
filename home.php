@@ -89,6 +89,10 @@
         <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
         <li class="nav-item"><a class="nav-link" href="productscategories.php">Products</a></li>
         <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+        <li class="nav-item ms-3">
+        <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
+        </li>
+      </ul>
       </ul>
     </div>
   </div>
