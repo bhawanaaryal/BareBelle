@@ -257,7 +257,7 @@ footer {
 </body>
 <footer>
         <div class="container">
-            &copy; 2025 GlowCare Skincare. All rights reserved.
+            &copy; 2025 BareBelle Skincare. All rights reserved.
         </div>
     </footer>
 </html>
