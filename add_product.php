@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['price'];
     $quantity = $_POST['quantity'];
     $category = $_POST['category'];
+    $skin_issue = $_POST['skin_issue'];
 
     // Handle image upload
     $image = $_FILES['image']['name'];
@@ -43,10 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (move_uploaded_file($temp_image, $image_path)) {
         // Insert into database
-        $sql = "INSERT INTO products (name, description, price, quantity, category, image)
-                VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO products (name, description, price, quantity, category, skin_issue, image)
+                VALUES (?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssdiss", $name, $description, $price, $quantity, $category, $image_path);
+        $stmt->bind_param("ssdiss", $name, $description, $price, $quantity, $category, $skin_issue, $image_path);
 
         if ($stmt->execute()) {
             echo "<script>alert('Product added successfully!'); window.location.href='add_product.php';</script>";
@@ -172,8 +173,21 @@ $conn->close();
                     <option value="facemask">Facemask</option>
                     <option value="cleanser">Cleanser</option>
                     <option value="toner">Toner</option>
+                    <option value="eyecream">Eye Cream/Serum</option>
                 </select>
             </div>
+
+                <div class="mb-3">
+                <label class="form-label">Skin Issue</label>
+                <select name="skin_issue" class="form-select" required>
+                    <option value="">-- Select Issue --</option>
+                    <option value="acne">Acne</option>
+                    <option value="black heads">Black heads</option>
+                    <option value="dark circles">Dark Circles</option>
+                    <option value="rosacea">Rosacea</option>
+                    <option value="normal">normal</option>
+                </select>
+                </div>
 
             <div class="mb-3">
                 <label class="form-label">Product Image</label>

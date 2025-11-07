@@ -114,26 +114,7 @@ $result = $conn->query($sql);
 </head>
 <body>
 
-<!-- Navbar (same as before) -->
-<nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">BareBelle Admin</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="adminNavbar">
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item"><a class="nav-link" href="add_product.php">Add Product</a></li>
-        <li class="nav-item"><a class="nav-link" href="manage_products.php">Manage Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="view_order.php">Manage Orders</a></li>
-        <li class="nav-item"><a class="nav-link" href="user_list.php">Manage Customers</a></li>
-        <li class="nav-item ms-3">
-          <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<?php include 'navbar.php'; ?>
 
 <div class="container">
   <div class="title">Customer Orders</div>

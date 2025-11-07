@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
+            $_SESSION['loggedin'] = true;
 
             // Redirect based on role
             if ($user['role'] == 'admin') {
@@ -146,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="productscategories.php">Products</a></li>
           <li class="nav-item"><a class="nav-link active" href="login.php">Login</a></li>
         </ul>
       </div>
@@ -169,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit" class="btn btn-primary" style="background-color: #9f5f80; border: none;">Login</button>
       </div>
       <div class="register-link">
-        Don't have an account? <a href="registration.php">Register here</a>
+        Don't have an account? <a href="register.php">Register here</a>
       </div>
     </form>
   </div>

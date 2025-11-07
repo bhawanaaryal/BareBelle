@@ -409,3 +409,22 @@ Insert query executed: Success
 Product added to wishlist successfully
 Database connection closed
 === End of request ===
+
+=== Wishlist Action Request at 2025-11-05 18:40:39 ===
+Session started
+SESSION data: Array
+(
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 6
+)
+
+Database connection included
+ERROR: User not logged in

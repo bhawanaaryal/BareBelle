@@ -3566,3 +3566,357 @@ Insert query executed: Success
 Product added to cart successfully
 Database connection closed
 === End of request ===
+
+=== Cart Action Request at 2025-05-02 20:39:30 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 8
+Database connection status: Connected
+Attempting to add product 8 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-05-10 12:03:33 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 4
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 4
+Action: add
+Product ID: 8
+Database connection status: Connected
+Attempting to add product 8 to cart for user 4
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-05 18:32:55 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 2
+    [username] => 
+    [role] => admin
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 37
+)
+
+Database connection included
+User ID: 2
+Action: add
+Product ID: 37
+Database connection status: Connected
+Attempting to add product 37 to cart for user 2
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-05 18:34:00 ===
+Session started
+SESSION data: Array
+(
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 47
+)
+
+Database connection included
+ERROR: User not logged in
+
+=== Cart Action Request at 2025-11-05 18:34:11 ===
+Session started
+SESSION data: Array
+(
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 35
+)
+
+Database connection included
+ERROR: User not logged in
+
+=== Cart Action Request at 2025-11-05 18:36:31 ===
+Session started
+SESSION data: Array
+(
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 6
+)
+
+Database connection included
+ERROR: User not logged in
+
+=== Cart Action Request at 2025-11-05 18:40:37 ===
+Session started
+SESSION data: Array
+(
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 6
+)
+
+Database connection included
+ERROR: User not logged in
+
+=== Cart Action Request at 2025-11-05 19:00:02 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 49
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 49
+Database connection status: Connected
+Attempting to add product 49 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-05 19:00:03 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 49
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 49
+Database connection status: Connected
+Attempting to add product 49 to cart for user 1
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-05 19:04:30 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 47
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 47
+Database connection status: Connected
+Attempting to add product 47 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-06 08:30:02 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 48
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 48
+Database connection status: Connected
+Attempting to add product 48 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-06 08:31:06 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 36
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 36
+Database connection status: Connected
+Attempting to add product 36 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-06 12:20:11 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 48
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 48
+Database connection status: Connected
+Attempting to add product 48 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===

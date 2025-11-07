@@ -92,6 +92,9 @@ if (isset($_POST['place_order'])) {
     <meta charset="UTF-8">
     <title>Place Order</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <?php include 'navbar.php'; ?>
+    
     <style>
         body {
             font-family: 'Quicksand', sans-serif;

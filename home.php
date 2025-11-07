@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,9 +67,9 @@
   </div>
 </head>
 <body>
- 
-    <!-- Navbar -->
-    <!-- Navbar -->
+<?php include 'navbar.php'; ?>
+<!--
+
 <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">BareBelle</a>
@@ -75,7 +77,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <!-- Search Form with Icon -->
+   
       <form class="d-flex me-3" action="search.php" method="GET">
         <input class="form-control me-2" type="search" name="query" placeholder="Search..." aria-label="Search" style="width: 180px;">
         <button class="btn btn-outline-secondary" type="submit">
@@ -83,7 +85,6 @@
         </button>
       </form>
 
-      <!-- Navigation Links -->
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
@@ -97,7 +98,7 @@
     </div>
   </div>
 </nav>
-
+!--> 
     <!-- Hero Section with Banner Image -->
     <section class="hero">
         <img src="pics/banner.jpg.jpeg" alt="Banner Image" class="hero-img">

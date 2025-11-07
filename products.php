@@ -22,26 +22,52 @@ if ($conn->connect_error) {
 }
 
 $category = isset($_GET['category']) ? $_GET['category'] : '';
+$skin_issue = isset($_GET['skin_issue']) ? $_GET['skin_issue'] : '';
 $products = [];
 
-debug_log("Browsing category: " . ($category ? $category : "none"));
+debug_log("Filter applied: " . ($category ?: ($skin_issue ?: "none")));
 
 if (!empty($category)) {
-  $stmt = $conn->prepare("SELECT id, name, image, price FROM products WHERE category = ?");
-  $stmt->bind_param("s", $category);
-  $stmt->execute();
-  $result = $stmt->get_result();
+    // Filter by category
+    $stmt = $conn->prepare("SELECT id, name, image, price FROM products WHERE LOWER(category) = LOWER(?)");
+    $stmt->bind_param("s", $category);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-  while ($row = $result->fetch_assoc()) {
-    $products[] = $row;
-  }
-  
-  debug_log("Found " . count($products) . " products in category: $category");
+    while ($row = $result->fetch_assoc()) {
+        $products[] = $row;
+    }
 
-  $stmt->close();
+    debug_log("Found " . count($products) . " products for category: $category");
+    $stmt->close();
+
+} elseif (!empty($skin_issue)) {
+    // Filter by skin issue
+    $stmt = $conn->prepare("SELECT id, name, image, price FROM products WHERE LOWER(skin_issue) = LOWER(?)");
+    $stmt->bind_param("s", $skin_issue);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    while ($row = $result->fetch_assoc()) {
+        $products[] = $row;
+    }
+
+    debug_log("Found " . count($products) . " products for skin issue: $skin_issue");
+    $stmt->close();
+}
+
+else {
+    // ✅ Default: show all products
+    $sql = "SELECT id, name, image, price FROM products";
+    $result = $conn->query($sql);
+
+    while ($row = $result->fetch_assoc()) {
+        $products[] = $row;
+    }
 }
 
 $conn->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -59,23 +85,7 @@ $conn->close();
       background: linear-gradient(135deg, #fff0f3, #e4d3dc);
       padding-top: 90px;
     }
-    .navbar {
-      background-color: #c3cfea;
-    }
 
-    .navbar-brand {
-      font-weight: 700;
-      color: #9f5f80;
-    }
-
-    .nav-link {
-      font-weight: 500;
-      color: #333;
-    }
-
-    .nav-link:hover {
-      color: #f8c8dc;
-    }
     h2 {
       text-align: center;
       color: #9f5f80;
@@ -257,38 +267,7 @@ footer {
     <!-- Alert for notifications -->
     <div class="alert" id="productAlert" role="alert" style="display: none;"></div>
     
-    <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">BareBelle</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      
-      <!-- Search Form with Icon -->
-      <form class="d-flex me-3" action="search.php" method="GET">
-        <input class="form-control me-2" type="search" name="query" placeholder="Search..." aria-label="Search" style="width: 180px;">
-        <button class="btn btn-outline-secondary" type="submit">
-          <i class="bi bi-search"></i>
-        </button>
-      </form>
-
-      <!-- Navigation Links -->
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="productscategories.php">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
-
-        <!-- Logout Button -->
-        <li class="nav-item ms-3">
-        <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<?php include 'navbar.php'; ?>
 
 <!-- This should be placed outside of the product grid -->
 <div class="floating-icons">
@@ -301,7 +280,18 @@ footer {
 </div>
 
 <div class="container">
-    <h2><?php echo ucfirst($category); ?></h2>
+    <h2>
+  <?php 
+    if (!empty($category)) {
+        echo ucfirst($category) . " Products";
+    } elseif (!empty($skin_issue)) {
+        echo "Products for " . ucfirst($skin_issue);
+    } else {
+        echo "All Products";
+    }
+  ?>
+</h2>
+
     <div class="product-grid">
       <?php if (count($products) > 0): ?>
         <?php foreach ($products as $product): ?>

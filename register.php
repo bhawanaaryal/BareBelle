@@ -102,23 +102,6 @@ $conn->close();
       flex-direction: column;
     }
 
-    .navbar {
-      background-color: #c3cfea;
-    }
-
-    .navbar-brand {
-      font-weight: 700;
-      color: #9f5f80;
-    }
-
-    .nav-link {
-      font-weight: 500;
-      color: #333;
-    }
-
-    .nav-link:hover {
-      color: #f8c8dc;
-    }
 
     .form-container {
       max-width: 500px;
@@ -162,23 +145,7 @@ $conn->close();
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg shadow-sm fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">BareBelle</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
-          <li class="nav-item"><a class="nav-link active" href="register.php">Register</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <?php include 'navbar.php'; ?>
 
   <!-- Registration Form -->
   <div class="container form-container">

@@ -66,23 +66,7 @@ $conn->close();
             padding-bottom: 50px;
         }
 
-        .navbar {
-            background-color: #c3cfea;
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            color: #9f5f80;
-        }
-
-        .nav-link {
-            font-weight: 500;
-            color: #333;
-        }
-
-        .nav-link:hover {
-            color: #f8c8dc;
-        }
+     
 
         .wishlist-container {
             background-color: rgba(255, 255, 255, 0.9);
@@ -289,33 +273,7 @@ $conn->close();
     <!-- Alert for notifications -->
     <div class="alert" id="wishlistAlert" role="alert" style="display: none;"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">BareBelle</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <!-- Search Form with Icon -->
-                <form class="d-flex me-3" action="search.php" method="GET">
-                    <input class="form-control me-2" type="search" name="query" placeholder="Search..." aria-label="Search" style="width: 180px;">
-                    <button class="btn btn-outline-secondary" type="submit">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </form>
-
-                <!-- Navigation Links -->
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cart.php">Cart</a></li>
-                    <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include 'navbar.php'; ?>
 
     <div class="container my-5">
         <!-- Display error if any -->
