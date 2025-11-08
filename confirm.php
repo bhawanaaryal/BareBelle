@@ -34,28 +34,36 @@ $user_details = $user_result->fetch_assoc();
 // Handle confirmation button click
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($cart_items)) {
-        // Insert into orders
-        $stmt = $conn->prepare("INSERT INTO orders (user_id, total_amount, status) VALUES (?, ?, 'Paid')");
-        $stmt->bind_param("id", $user_id, $total_amount);
+    // Insert into orders
+    $stmt = $conn->prepare("INSERT INTO orders (user_id, total_amount, status) VALUES (?, ?, 'Paid')");
+    $stmt->bind_param("id", $user_id, $total_amount);
+    $stmt->execute();
+    $order_id = $conn->insert_id;
+
+    // ✅ Save cart items in session BEFORE clearing
+    $_SESSION['cart'] = $cart_items;
+
+    // Insert each item into order_items and update product quantities
+    foreach ($cart_items as $item) {
+        $stmt = $conn->prepare("INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("iiid", $order_id, $item['product_id'], $item['quantity'], $item['price']);
         $stmt->execute();
-        $order_id = $conn->insert_id;
 
-        // Insert each item into order_items and update product quantities
-        foreach ($cart_items as $item) {
-            // Insert order item
-            $stmt = $conn->prepare("INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
-            $stmt->bind_param("iiid", $order_id, $item['product_id'], $item['quantity'], $item['price']);
-            $stmt->execute();
+        $update_product_query = "UPDATE products SET quantity = quantity - ? WHERE id = ?";
+        $update_stmt = $conn->prepare($update_product_query);
+        $update_stmt->bind_param("ii", $item['quantity'], $item['product_id']);
+        $update_stmt->execute();
+    }
 
-            // Decrease product quantity in the products table
-            $update_product_query = "UPDATE products SET quantity = quantity - ? WHERE id = ?";
-            $update_stmt = $conn->prepare($update_product_query);
-            $update_stmt->bind_param("ii", $item['quantity'], $item['product_id']);
-            $update_stmt->execute();
-        }
+    // ✅ Now safely delete cart from DB only (not session)
+    $delete_cart_query = "DELETE FROM cart WHERE user_id = ?";
+    $delete_cart_stmt = $conn->prepare($delete_cart_query);
+    $delete_cart_stmt->bind_param("i", $user_id);
+    $delete_cart_stmt->execute();
 
-        // Clear cart from session
-        unset($_SESSION['cart']);  // Remove cart from session
+    // ❌ DO NOT unset $_SESSION['cart']
+
+
 
         // Clear cart from database (optional but good practice)
         $delete_cart_query = "DELETE FROM cart WHERE user_id = ?";

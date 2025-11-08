@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -202,6 +206,12 @@ footer {
           <a href="products.php?category=cleanser">
             <img src="pics/cleanser.jpeg" alt="Cleanser">
             <p>Cleanser</p>
+          </a>
+        </div>
+                <div class="category-box">
+          <a href="products.php?category=eyecream">
+            <img src="pics/eyecream.png" alt="Eye Cream/Serum">
+            <p>Eye Cream/Serum</p>
           </a>
         </div>
       </div>

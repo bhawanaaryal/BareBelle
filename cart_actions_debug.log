@@ -3920,3 +3920,1365 @@ Insert query executed: Success
 Product added to cart successfully
 Database connection closed
 === End of request ===
+
+=== Cart Action Request at 2025-11-07 09:30:23 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 30
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 30
+Database connection status: Connected
+Attempting to add product 30 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 09:44:53 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 68
+            [payment_method] => Khalti
+            [total_amount] => 900
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 33
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 33
+Database connection status: Connected
+Attempting to add product 33 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 10:15:47 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 5
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 47
+)
+
+Database connection included
+User ID: 5
+Action: add
+Product ID: 47
+Database connection status: Connected
+Attempting to add product 47 to cart for user 5
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 17:55:23 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 3
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 3
+Database connection status: Connected
+Attempting to add product 3 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 18:02:24 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 70
+            [payment_method] => Cash on Delivery
+            [total_amount] => 935
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 65
+                    [user_id] => 1
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 2
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 2
+Database connection status: Connected
+Attempting to add product 2 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 18:07:45 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 71
+            [payment_method] => Cash on Delivery
+            [total_amount] => 475
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 65
+                    [user_id] => 1
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 1
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 1
+Database connection status: Connected
+Attempting to add product 1 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 18:08:11 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 72
+            [payment_method] => Cash on Delivery
+            [total_amount] => 299
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 67
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 18:08:24 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 73
+            [payment_method] => Cash on Delivery
+            [total_amount] => 595
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 68
+                    [user_id] => 1
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 5
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 5
+Database connection status: Connected
+Attempting to add product 5 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 18:09:39 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 74
+            [payment_method] => Khalti
+            [total_amount] => 1040
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 1
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 1
+Database connection status: Connected
+Attempting to add product 1 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 18:13:14 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 75
+            [payment_method] => Cash on Delivery
+            [total_amount] => 299
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 70
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 18:13:54 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 75
+            [payment_method] => Cash on Delivery
+            [total_amount] => 299
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 70
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 48
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 48
+Database connection status: Connected
+Attempting to add product 48 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 18:14:09 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 76
+            [payment_method] => Cash on Delivery
+            [total_amount] => 2252
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 71
+                    [user_id] => 1
+                    [product_id] => 6
+                    [quantity] => 1
+                    [name] => Dot & Key Watermelon Moisturizer- 60 Ml
+                    [price] => 752.00
+                    [image] => product_images/dotandkeymoist.JPG
+                )
+
+            [1] => Array
+                (
+                    [id] => 72
+                    [user_id] => 1
+                    [product_id] => 48
+                    [quantity] => 1
+                    [name] => Tata Harper Superkind Radiance Mask
+                    [price] => 1500.00
+                    [image] => product_images/tatamask.JPG
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 12
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 12
+Database connection status: Connected
+Attempting to add product 12 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-07 18:31:26 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 76
+            [payment_method] => Cash on Delivery
+            [total_amount] => 2252
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 71
+                    [user_id] => 1
+                    [product_id] => 6
+                    [quantity] => 1
+                    [name] => Dot & Key Watermelon Moisturizer- 60 Ml
+                    [price] => 752.00
+                    [image] => product_images/dotandkeymoist.JPG
+                )
+
+            [1] => Array
+                (
+                    [id] => 72
+                    [user_id] => 1
+                    [product_id] => 48
+                    [quantity] => 1
+                    [name] => Tata Harper Superkind Radiance Mask
+                    [price] => 1500.00
+                    [image] => product_images/tatamask.JPG
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 30
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 30
+Database connection status: Connected
+Attempting to add product 30 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 07:37:59 ===
+Session started
+SESSION data: Array
+(
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 28
+)
+
+Database connection included
+ERROR: User not logged in
+
+=== Cart Action Request at 2025-11-08 07:38:25 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 27
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 27
+Database connection status: Connected
+Attempting to add product 27 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 07:38:58 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 78
+            [payment_method] => Cash on Delivery
+            [total_amount] => 2200
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 75
+                    [user_id] => 1
+                    [product_id] => 27
+                    [quantity] => 1
+                    [name] => COSRX Niacinamide 2% + BHA 4% Blackhead Exfoliant Toner
+                    [price] => 2200.00
+                    [image] => product_images/bh_toner.JPG
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 07:38:59 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 78
+            [payment_method] => Cash on Delivery
+            [total_amount] => 2200
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 75
+                    [user_id] => 1
+                    [product_id] => 27
+                    [quantity] => 1
+                    [name] => COSRX Niacinamide 2% + BHA 4% Blackhead Exfoliant Toner
+                    [price] => 2200.00
+                    [image] => product_images/bh_toner.JPG
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 1
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 07:39:48 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 79
+            [payment_method] => Khalti
+            [total_amount] => 595
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 76
+                    [user_id] => 1
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 07:40:28 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 80
+            [payment_method] => Khalti
+            [total_amount] => 595
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 77
+                    [user_id] => 1
+                    [product_id] => 4
+                    [quantity] => 1
+                    [name] => Doux 24 Moisturizer 100gm
+                    [price] => 595.00
+                    [image] => product_images/douxmoist.png
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 41
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 41
+Database connection status: Connected
+Attempting to add product 41 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 07:41:30 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 81
+            [payment_method] => Khalti
+            [total_amount] => 2345
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 78
+                    [user_id] => 1
+                    [product_id] => 41
+                    [quantity] => 1
+                    [name] => Paula's Choice Skin Recovery Toner
+                    [price] => 2345.00
+                    [image] => product_images/paulatoner.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 41
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 41
+Database connection status: Connected
+Attempting to add product 41 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 07:42:35 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 82
+            [payment_method] => Khalti
+            [total_amount] => 2345
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 79
+                    [user_id] => 1
+                    [product_id] => 41
+                    [quantity] => 1
+                    [name] => Paula's Choice Skin Recovery Toner
+                    [price] => 2345.00
+                    [image] => product_images/paulatoner.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 9
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 9
+Database connection status: Connected
+Attempting to add product 9 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 07:55:27 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 83
+            [payment_method] => Khalti
+            [total_amount] => 2090
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 80
+                    [user_id] => 1
+                    [product_id] => 9
+                    [quantity] => 1
+                    [name] => Beauty Of Joseon Spf 50 Relief Sun Cream: Rice + Probiotics - 50ml
+                    [price] => 2090.00
+                    [image] => product_images/beautyofjoseonsun.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 19
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 19
+Database connection status: Connected
+Attempting to add product 19 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 08:17:51 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 84
+            [payment_method] => Khalti
+            [total_amount] => 2700
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 81
+                    [user_id] => 1
+                    [product_id] => 19
+                    [quantity] => 1
+                    [name] => ANUA Heartleaf Quercetinol Pore Cleanser
+                    [price] => 2700.00
+                    [image] => product_images/acne_cleanser.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 30
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 30
+Database connection status: Connected
+Attempting to add product 30 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 08:31:43 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 13
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 13
+Database connection status: Connected
+Attempting to add product 13 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 08:32:19 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 86
+            [payment_method] => Khalti
+            [total_amount] => 2190
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 83
+                    [user_id] => 1
+                    [product_id] => 13
+                    [quantity] => 1
+                    [name] => CeraVe Eye Repair Cream
+                    [price] => 2190.00
+                    [image] => product_images/ceraveeye.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 13
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 13
+Database connection status: Connected
+Attempting to add product 13 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 08:33:06 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 87
+            [payment_method] => Khalti
+            [total_amount] => 2190
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 84
+                    [user_id] => 1
+                    [product_id] => 13
+                    [quantity] => 1
+                    [name] => CeraVe Eye Repair Cream
+                    [price] => 2190.00
+                    [image] => product_images/ceraveeye.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 14
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 14
+Database connection status: Connected
+Attempting to add product 14 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===

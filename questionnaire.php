@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <?php // questionnaire.php ?>
 <!DOCTYPE html>
 <html lang="en">

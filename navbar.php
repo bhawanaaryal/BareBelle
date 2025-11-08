@@ -1,10 +1,3 @@
-<?php
-// ✅ Start session only if not already active
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,12 +12,13 @@ if (session_status() === PHP_SESSION_NONE) {
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
     /* Navbar Styles */
-
-    .navbar, 
-    .navbar * {
-    font-family: 'Quicksand', sans-serif !important;
+    .navbar, .navbar * {
+      font-family: 'Quicksand', sans-serif !important;
     }
 
     .navbar {
@@ -41,14 +35,39 @@ if (session_status() === PHP_SESSION_NONE) {
       color: #333;
       font-weight: 500;
       padding: 10px 15px;
+      transition: color 0.3s;
     }
 
     .navbar-nav .nav-link:hover {
       color: #f8c8dc;
     }
 
-    .btn-login,
-    .btn-logout {
+    /* Glowing Skin Analysis Button */
+    .btn-glow {
+      background: linear-gradient(90deg, #f8c8dc, #b4a8f0);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(180, 168, 240, 0.6);
+      animation: glowPulse 2s infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-glow:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(180, 168, 240, 0.8);
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 10px rgba(180, 168, 240, 0.6); }
+      50% { box-shadow: 0 0 20px rgba(248, 200, 220, 0.9); }
+      100% { box-shadow: 0 0 10px rgba(180, 168, 240, 0.6); }
+    }
+
+    /* Login / Logout Buttons */
+    .btn-login, .btn-logout {
       background-color: #f8c8dc;
       color: black;
       font-weight: 600;
@@ -58,13 +77,37 @@ if (session_status() === PHP_SESSION_NONE) {
       transition: all 0.3s ease;
     }
 
-    .btn-login:hover,
-    .btn-logout:hover {
+    .btn-login:hover, .btn-logout:hover {
       background-color: #b4a8f0ff;
       color: white;
     }
 
-    /* Make navbar content fit nicely on smaller screens */
+    /* Collapsible Search */
+    .search-container {
+      position: relative;
+    }
+
+    .search-input {
+      width: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .search-container.active .search-input {
+      width: 180px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .search-btn {
+      background-color: transparent;
+      border: none;
+      color: #333;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
     @media (max-width: 991px) {
       .navbar-nav {
         text-align: center;
@@ -72,7 +115,7 @@ if (session_status() === PHP_SESSION_NONE) {
       .navbar-nav .nav-item {
         margin-bottom: 10px;
       }
-      form.d-flex {
+      .search-container {
         justify-content: center;
         margin-bottom: 10px;
       }
@@ -92,10 +135,11 @@ if (session_status() === PHP_SESSION_NONE) {
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
         <!-- Search Form -->
-        <form class="d-flex me-3" action="search.php" method="GET">
-          <input class="form-control me-2" type="search" name="query" placeholder="Search..." aria-label="Search" style="width: 180px;">
-          <button class="btn btn-outline-secondary" type="submit">
+        <form class="d-flex me-3 search-container" action="search.php" method="GET" id="searchForm">
+          <input class="form-control me-2 search-input" type="search" name="query" placeholder="Search..." aria-label="Search">
+          <button class="search-btn" type="button" id="searchToggle">
             <i class="bi bi-search"></i>
           </button>
         </form>
@@ -105,7 +149,11 @@ if (session_status() === PHP_SESSION_NONE) {
           <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
           <li class="nav-item"><a class="nav-link" href="productscategories.php">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+
+          <!-- ✨ Glowing Button -->
+          <li class="nav-item ms-2">
+            <a href="diagnosis.php" class="btn btn-glow">Skin Analysis</a>
+          </li>
 
           <!-- Login / Logout Conditional -->
           <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
@@ -124,5 +172,21 @@ if (session_status() === PHP_SESSION_NONE) {
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Search Toggle Script -->
+  <script>
+    const searchToggle = document.getElementById('searchToggle');
+    const searchForm = document.getElementById('searchForm');
+
+    searchToggle.addEventListener('click', () => {
+      searchForm.classList.toggle('active');
+      const input = searchForm.querySelector('.search-input');
+      if (searchForm.classList.contains('active')) {
+        input.focus();
+      } else {
+        input.blur();
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,5 +1,12 @@
 <?php
-// ==================== BACKEND: HANDLE FILE UPLOAD AND AI INTEGRATION ====================
+
+session_start();
+
+// If the user is not logged in, redirect to login page
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
 
 // FastAPI endpoint
 $AI_API = 'http://127.0.0.1:8000/detect/';

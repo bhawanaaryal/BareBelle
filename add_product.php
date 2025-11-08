@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO products (name, description, price, quantity, category, skin_issue, image)
                 VALUES (?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssdiss", $name, $description, $price, $quantity, $category, $skin_issue, $image_path);
+        $stmt->bind_param("ssdisss", $name, $description, $price, $quantity, $category, $skin_issue, $image_path);
 
         if ($stmt->execute()) {
             echo "<script>alert('Product added successfully!'); window.location.href='add_product.php';</script>";
