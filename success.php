@@ -109,14 +109,8 @@ if (isset($_SESSION['order']) && isset($_SESSION['user_details']) && isset($_SES
             color: #333;
         }
 
-        footer {
-            background-color: #f0f0f0;
-            padding: 15px 0;
-            text-align: center;
-            color: #555;
-            font-size: 0.95rem;
-            margin-top: auto;
-        }
+
+    
     </style>
 </head>
 <body>
@@ -146,9 +140,7 @@ if (isset($_SESSION['order']) && isset($_SESSION['user_details']) && isset($_SES
             <a href="home.php" class="btn">Continue Shopping</a>
         </div>
     </div>
+<?php include 'footer.php'; ?> 
 
-    <footer>
-        &copy; 2025 BareBelle. All rights reserved.
-    </footer>
 </body>
 </html>

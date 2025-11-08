@@ -219,13 +219,7 @@ $conn->close();
             background-color: #c3cfea;
         }
         
-        footer {
-            background-color: #f0f0f0;
-            padding: 15px 0;
-            text-align: center;
-            color: #555;
-            font-size: 0.95rem;
-        }
+
         
         .alert {
             position: fixed;
@@ -331,13 +325,7 @@ $conn->close();
         </a>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            &copy; 2025 Barebelle Skincare. All rights reserved.
-        </div>
-    </footer>
-
+<?php include 'footer.php'; ?>
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     

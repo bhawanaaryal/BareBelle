@@ -153,14 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['skinImage'])) {
       color: white;
     }
 
-    footer {
-      background-color: #f0f0f0;
-      padding: 15px 0;
-      text-align: center;
-      color: #555;
-      font-size: 0.95rem;
-      margin-top: auto;
-    }
+
   </style>
 </head>
 <body>
@@ -219,13 +212,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['skinImage'])) {
   </div>
 </div>
 
-<!-- Footer -->
-<footer>
-  <div class="container">
-    &copy; 2025 BareBelle Skincare. All rights reserved.
-  </div>
-</footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<?php include 'footer.php'; ?>
 </body>
 </html>

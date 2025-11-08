@@ -151,14 +151,11 @@ session_start();
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            &copy; 2025 BareBelle Skincare. All rights reserved.
-        </div>
-    </footer>
-
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+<?php include 'footer.php'; ?>
+
 </body>
 </html>

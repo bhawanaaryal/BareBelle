@@ -186,13 +186,6 @@ if (!$cart_query) {
       background-color: #c3cfea;
     }
     
-    footer {
-      background-color: #f0f0f0;
-      padding: 15px 0;
-      text-align: center;
-      color: #555;
-      font-size: 0.95rem;
-    }
     
     .alert {
       position: fixed;
@@ -471,5 +464,8 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Cart page loaded');
 });
 </script>
+
+<?php include 'footer.php'; ?>
+
 </body>
 </html>

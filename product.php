@@ -115,23 +115,7 @@ $conn->close();
             background-color: #703f5d;
         }
 
-        .navbar {
-      background-color: #c3cfea;
-    }
 
-    .navbar-brand {
-      font-weight: 700;
-      color: #9f5f80;
-    }
-
-    .nav-link {
-      font-weight: 500;
-      color: #333;
-    }
-
-    .nav-link:hover {
-      color: #f8c8dc;
-    }
     .floating-icons {
     position: fixed;
     bottom: 20px;
@@ -159,14 +143,7 @@ $conn->close();
 .floating-icons a:hover {
     background-color: #c3cfea;
 }
-        footer {
-            background-color: #f0f0f0;
-            padding: 15px 0;
-            text-align: center;
-            color: #555;
-            font-size: 0.95rem;
-            margin-top: auto; /* Push footer to the bottom */
-        }
+
     </style>
 </head>
 <body>
@@ -206,10 +183,7 @@ $conn->close();
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 BareBelle. All rights reserved.</p>
-    </footer>
+ <?php include 'footer.php'; ?>
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

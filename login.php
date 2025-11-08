@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       flex-direction: column;
     }
 
-    .navbar {
+    /* .navbar {
       background-color: #c3cfea;
     }
 
@@ -92,10 +92,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     .nav-link:hover {
       color: #f8c8dc;
-    }
+    } */
 
     .form-container {
-      max-width: 450px;
+      max-width: 100px;
       background-color: #ffffff;
       padding: 30px;
       border-radius: 12px;
@@ -124,19 +124,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       text-decoration: underline;
     }
 
-    footer {
-      background-color: #f0f0f0;
-      padding: 15px 0;
-      text-align: center;
-      color: #555;
-      font-size: 0.95rem;
-      margin-top: auto;
-    }
+
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
+<?php include 'navbar.php';?>
+
+  <!-- Navbar
   <nav class="navbar navbar-expand-lg shadow-sm fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">BareBelle</a>
@@ -152,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- Login Form -->
   <div class="container form-container">
@@ -175,12 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </form>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      &copy; 2025 BareBelle Skincare. All rights reserved.
-    </div>
-  </footer>
+<?php include 'footer.php'; ?>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

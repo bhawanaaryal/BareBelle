@@ -140,14 +140,7 @@ if (isset($_POST['place_order'])) {
       color: #333;
     }
 
-    footer {
-      background-color: #f0f0f0;
-      padding: 15px 0;
-      text-align: center;
-      color: #555;
-      font-size: 0.95rem;
-      margin-top: auto;
-    }
+
 
     /* small responsive tweak */
     @media (max-width: 576px) {
@@ -196,9 +189,7 @@ if (isset($_POST['place_order'])) {
   <?php endif; ?>
 </div>
 
-<footer>
-  &copy; 2025 BareBelle. All rights reserved.
-</footer>
+
 
 <script>
 function proceedToCheckout(total) {
@@ -235,6 +226,8 @@ document.getElementById('placeOrderForm').addEventListener('submit', function(e)
   }
 });
 </script>
+
+<?php include 'footer.php'; ?>
 
 </body>
 </html>

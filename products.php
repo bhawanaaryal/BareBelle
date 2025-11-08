@@ -175,13 +175,7 @@ $conn->close();
 .floating-icons a:hover {
     background-color: #c3cfea;
 }
-footer {
-            background-color: #f0f0f0;
-            padding: 15px 0;
-            text-align: center;
-            color: #555;
-            font-size: 0.95rem;
-        }
+
 
 .alert {
     position: fixed;
@@ -269,7 +263,6 @@ footer {
     
 <?php include 'navbar.php'; ?>
 
-<!-- This should be placed outside of the product grid -->
 <div class="floating-icons">
     <a href="wishlist.php" title="Wishlist">
         <i class="bi bi-heart"></i>
@@ -324,7 +317,6 @@ footer {
         </div>
         <div class="modal-body">
           <p>No items in wishlist.</p>
-          <!-- You can use PHP/JS here later to show dynamic content -->
         </div>
         <div class="modal-footer">
           <a href="wishlist.php" class="btn btn-outline-primary">Edit Wishlist</a>
@@ -343,7 +335,7 @@ footer {
         </div>
         <div class="modal-body">
           <p>No items in cart.</p>
-          <!-- Replace this with dynamic product listing -->
+
         </div>
         <div class="modal-footer">
           <a href="cart.php" class="btn btn-outline-primary">Edit Cart</a>
@@ -352,12 +344,7 @@ footer {
     </div>
   </div>
 
-      <!-- Footer -->
-      <footer>
-        <div class="container">
-            &copy; 2025 BareBelle Skincare. All rights reserved.
-        </div>
-    </footer>
+<?php include 'footer.php'; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

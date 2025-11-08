@@ -5282,3 +5282,65 @@ Insert query executed: Success
 Product added to cart successfully
 Database connection closed
 === End of request ===
+
+=== Cart Action Request at 2025-11-08 08:42:11 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 88
+            [payment_method] => Khalti
+            [total_amount] => 2100
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 85
+                    [user_id] => 1
+                    [product_id] => 14
+                    [quantity] => 1
+                    [name] => Beauty of Joseon Revive Eye Serum: Ginseng + Retinal
+                    [price] => 2100.00
+                    [image] => product_images/boj_eye.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 16
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 16
+Database connection status: Connected
+Attempting to add product 16 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
