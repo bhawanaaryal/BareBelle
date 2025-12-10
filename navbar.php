@@ -149,6 +149,7 @@
           <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
           <li class="nav-item"><a class="nav-link" href="productscategories.php">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="orders.php">Orders</a></li>
 
           <!-- ✨ Glowing Button -->
           <li class="nav-item ms-2">
@@ -157,12 +158,12 @@
 
           <!-- Login / Logout Conditional -->
           <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-            <li class="nav-item ms-3">
-              <a class="btn btn-logout" href="logout.php">Logout</a>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">Logout</a>
             </li>
           <?php else: ?>
-            <li class="nav-item ms-3">
-              <a class="btn btn-login" href="login.php">Login</a>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Login</a>
             </li>
           <?php endif; ?>
         </ul>

@@ -82,15 +82,15 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
         <li class="nav-item"><a class="nav-link" href="user_list.php">Manage Customers</a></li>
 
         <!-- Logout Button -->
-        <li class="nav-item ms-3">
-          <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
+        <li class="nav-item">
+          <a class="nav-link" href="logout.php">Logout</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-
+<main>
     <div class="container dashboard-container">
         <div class="dashboard-title">Admin Dashboard</div>
 
@@ -126,7 +126,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
                     <a href="user_list.php" class="btn btn-custom">Open</a>
                 </div>
             </div>
-
+    </main>
 
 
     <!-- Bootstrap Bundle JS -->

@@ -1,10 +1,11 @@
+
 <?php
 if (isset($_GET['result'])) {
     $jsonString = urldecode($_GET['result']);
     $result = json_decode($jsonString, true);
-
     $imageURL = $result['result_image'] ?? null;
     $classes = $result['classes'] ?? [];
+    $confidences = $result['confidences'] ?? [];
 } else {
     echo "<p>No image uploaded.</p>";
     exit;
@@ -23,10 +24,44 @@ $descriptions = [
     'normal' => "Your skin appears normal — balanced, not too oily or dry, and free from significant blemishes."
 ];
 
-// Detect primary class
-$primaryClass = !empty($classes) ? strtolower(trim($classes[0])) : 'normal';
+// Combine class names and confidences
+$combined = [];
+for ($i = 0; $i < count($classes); $i++) {
+    $combined[] = [
+        'name' => strtolower(trim($classes[$i])),
+        'confidence' => $confidences[$i] ?? 0
+    ];
+}
+
+// Filter out 'normal' if there are other detections
+$nonNormal = array_filter($combined, fn($c) => $c['name'] !== 'normal');
+
+// Remove duplicate class names (keep highest confidence for each)
+$unique = [];
+foreach ($nonNormal as $c) {
+    $name = $c['name'];
+    if (!isset($unique[$name]) || $c['confidence'] > $unique[$name]['confidence']) {
+        $unique[$name] = $c;
+    }
+}
+$nonNormal = array_values($unique);
+
+// Determine primary and secondary classes
+if (count($nonNormal) > 0) {
+    // Sort by confidence (highest first)
+    usort($nonNormal, fn($a, $b) => $b['confidence'] <=> $a['confidence']);
+    $primaryClass = $nonNormal[0]['name'];
+    $secondaryClasses = array_slice(array_map(fn($c) => $c['name'], $nonNormal), 1);
+} else {
+    // Only normal detected
+    $primaryClass = !empty($combined) ? $combined[0]['name'] : 'normal';
+    $secondaryClasses = [];
+}
+
+
 $description = $descriptions[$primaryClass] ?? "No specific skin issue detected.";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,6 +134,11 @@ $description = $descriptions[$primaryClass] ?? "No specific skin issue detected.
 
     <h4 class="mt-4" style="color:#9f5f80;">Detected Issue: <?= ucfirst($primaryClass) ?></h4>
     <p><?= htmlspecialchars($description) ?></p>
+    
+    <?php if (!empty($secondaryClasses)): ?>
+    <h5 class="mt-3" style="color:#9f5f80;">Other Skin Issues:</h5>
+    <p><?= htmlspecialchars(implode(', ', array_map('ucfirst', $secondaryClasses))) ?></p>
+<?php endif; ?>
 
     <?php if ($primaryClass && $primaryClass !== 'normal'): ?>
         <a href="products.php?skin_issue=<?= urlencode($primaryClass) ?>" class="btn-recommendations">

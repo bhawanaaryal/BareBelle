@@ -276,11 +276,6 @@ if (!$cart_query) {
   </a>
 </div>
 
-<footer>
-  <div class="container">
-    &copy; 2025 BareBelle Skincare. All rights reserved.
-  </div>
-</footer>
 
 <script>
 // Function to show alert message

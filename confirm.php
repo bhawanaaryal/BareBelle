@@ -35,10 +35,14 @@ $user_details = $user_result->fetch_assoc();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($cart_items)) {
     // Insert into orders
-    $stmt = $conn->prepare("INSERT INTO orders (user_id, total_amount, status) VALUES (?, ?, 'Paid')");
-    $stmt->bind_param("id", $user_id, $total_amount);
-    $stmt->execute();
+$payment_method = 'khalti';
+$status = 'Paid';
+$stmt = $conn->prepare("INSERT INTO orders (user_id, total_amount, status, payment_method, order_date) VALUES (?, ?, ?, ?, NOW())");
+$stmt->bind_param("idss", $user_id, $total_amount, $status, $payment_method);
+$stmt->execute();
+
     $order_id = $conn->insert_id;
+    
 
     // ✅ Save cart items in session BEFORE clearing
     $_SESSION['cart'] = $cart_items;

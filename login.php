@@ -95,13 +95,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } */
 
     .form-container {
-      max-width: 100px;
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      margin: 100px auto 30px;
-    }
+  width: 90%;          /* responsive */
+  max-width: 400px;    /* keeps it narrow */
+  margin: 120px auto;  /* account for fixed navbar */
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
 
     .form-heading {
       font-weight: 600;
@@ -148,9 +149,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </div>
     </div>
   </nav> -->
-
+<main>
   <!-- Login Form -->
-  <div class="container form-container">
+  <div class="form-container">
     <h2 class="form-heading text-center">Login to Your Account</h2>
     <form action="#" method="post">
       <div class="mb-3">
@@ -169,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </div>
     </form>
   </div>
-
+  </main>
 <?php include 'footer.php'; ?>
 
   <!-- Bootstrap JS -->

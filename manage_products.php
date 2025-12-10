@@ -54,12 +54,14 @@ $result = $conn->query($sql);
 
 
     <style>
-        body {
-            font-family: 'Quicksand', sans-serif;
-            background: linear-gradient(135deg, #c3cfea, #f8c8dc);
-            padding: 60px 20px;
-            min-height: 100vh;
-        }
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #c3cfea, #f8c8dc);
+    padding: 100px 20px 60px; /* added top padding for fixed navbar */
+    min-height: 100vh;
+}
+
+
         .title {
             text-align: center;
             font-size: 2rem;
@@ -94,8 +96,7 @@ $result = $conn->query($sql);
 </head>
 <body>
 
-    <?php include 'navbar.php'; ?>
-
+    <?php include 'adminnav.php'; ?>
 
 <div class="container">
     <div class="title">Manage Products</div>

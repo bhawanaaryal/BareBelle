@@ -112,7 +112,9 @@ $conn->close();
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
+<?php include 'adminnav.php'; ?>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">BareBelle Admin</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
@@ -125,18 +127,18 @@ $conn->close();
         <li class="nav-item"><a class="nav-link" href="view_order.php">Manage Orders</a></li>
         <li class="nav-item"><a class="nav-link" href="user_list.php">Manage Customers</a></li>
 
-        <!-- Logout Button -->
+  
         <li class="nav-item ms-3">
           <a class="btn" href="logout.php" style="background-color: #f8c8dc; color: black;">Logout</a>
         </li>
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
 
     <!-- Add Product Form -->
-    <div class="container form-container">
+    <div class="form-container">
         <div class="form-title">Add New Product</div>
 
         <form action="add_product.php" method="POST" enctype="multipart/form-data">

@@ -50,12 +50,13 @@ $result = $conn->query($sql);
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(135deg, #c3cfea, #f8c8dc);
-      padding: 60px 20px;
-      min-height: 100vh;
-    }
+   body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #c3cfea, #f8c8dc);
+    padding: 100px 20px 60px; /* added top padding for fixed navbar */
+    min-height: 100vh;
+}
+
     .title {
       text-align: center;
       font-size: 2rem;
@@ -80,7 +81,10 @@ $result = $conn->query($sql);
   </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
+
+<?php include 'adminnav.php'; ?>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">BareBelle Admin</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
@@ -98,7 +102,7 @@ $result = $conn->query($sql);
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
 <div class="container">
   <div class="title">Registered Users</div>

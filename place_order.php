@@ -27,25 +27,34 @@ if (!isset($total_amount) || $total_amount <= 0) {
     die("Error: Total amount calculation failed.");
 }
 
+
 if (isset($_POST['place_order'])) {
-    $payment_method = $_POST['payment_method'];
+    $payment_method = $_POST['payment_method'] ?? 'cod'; // safe
 
     if ($payment_method == 'cod') {
-        // $stmt = $conn->prepare("INSERT INTO orders (user_id, total_amount, status) VALUES (?, ?, 'Pending')");
-        // $stmt->bind_param("id", $user_id, $total_amount);
-        // $stmt->execute();
-        // $order_id = $conn->insert_id;
+        // Insert order into database
+        $stmt = $conn->prepare("INSERT INTO orders (user_id, total_amount, status, payment_method, order_date) VALUES (?, ?, 'Pending', ?, NOW())");
+        $stmt->bind_param("ids", $user_id, $total_amount, $payment_method);
+        $stmt->execute();
+        $order_id = $conn->insert_id;
 
-        // foreach ($cart_items as $item) {
-        //     $stmt = $conn->prepare("INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
-        //     $stmt->bind_param("iiid", $order_id, $item['product_id'], $item['quantity'], $item['price']);
-        //     $stmt->execute();
-        // }
+        // Insert order items & reduce stock
+        foreach ($cart_items as $item) {
+            $stmt = $conn->prepare("INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
+            $stmt->bind_param("iiid", $order_id, $item['product_id'], $item['quantity'], $item['price']);
+            $stmt->execute();
 
-        // $stmt = $conn->prepare("DELETE FROM cart WHERE user_id = ?");
-        // $stmt->bind_param("i", $user_id);
-        // $stmt->execute();
+            $update = $conn->prepare("UPDATE products SET quantity = quantity - ? WHERE id=?");
+            $update->bind_param("ii", $item['quantity'], $item['product_id']);
+            $update->execute();
+        }
 
+        // Clear cart
+        $stmt = $conn->prepare("DELETE FROM cart WHERE user_id=?");
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+
+        // Save session
         $_SESSION['order'] = [
             'order_id' => $order_id,
             'payment_method' => 'Cash on Delivery',
@@ -53,9 +62,8 @@ if (isset($_POST['place_order'])) {
         ];
         $_SESSION['cart'] = $cart_items;
 
-        header("Location: confirm.php");
+        header("Location: success.php");
         exit();
-
     } elseif ($payment_method == 'khalti') {
         $_SESSION['order'] = [
             'payment_method' => 'Khalti',
@@ -67,6 +75,7 @@ if (isset($_POST['place_order'])) {
         exit();
     }
 }
+
 
 
 

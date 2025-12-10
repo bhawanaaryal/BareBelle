@@ -148,7 +148,7 @@ $conn->close();
     <?php include 'navbar.php'; ?>
 
   <!-- Registration Form -->
-  <div class="container form-container">
+  <div class="form-container">
     <h2 class="form-heading text-center">Create Your BareBelle Account</h2>
     <form action="#" method="post">
       <div class="mb-3">

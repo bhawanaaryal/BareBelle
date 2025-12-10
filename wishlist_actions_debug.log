@@ -428,3 +428,65 @@ POST data: Array
 
 Database connection included
 ERROR: User not logged in
+
+=== Wishlist Action Request at 2025-11-13 06:54:30 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 8
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 123
+                    [user_id] => 8
+                    [product_id] => 45
+                    [quantity] => 1
+                    [name] => Pellis Rejuvenating Acne Control Facewash 100ml
+                    [price] => 610.00
+                    [image] => product_images/acnefacewash.png
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 124
+            [payment_method] => Cash on Delivery
+            [total_amount] => 610
+        )
+
+    [user_details] => Array
+        (
+            [name] => Ram Roka
+            [email] => ramroka@gmail.com
+            [phone] => 9876345210
+            [address] => Kathmandu
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 47
+)
+
+Database connection included
+User ID: 8
+Action: add
+Product ID: 47
+Database connection status: Connected
+Attempting to add product 47 to wishlist for user 8
+Check query executed: Success
+Insert query executed: Success
+Product added to wishlist successfully
+Database connection closed
+=== End of request ===

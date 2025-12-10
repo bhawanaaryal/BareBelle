@@ -5344,3 +5344,2355 @@ Insert query executed: Success
 Product added to cart successfully
 Database connection closed
 === End of request ===
+
+=== Cart Action Request at 2025-11-08 10:24:40 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 34
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 34
+Database connection status: Connected
+Attempting to add product 34 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-08 13:56:44 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 19
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 19
+Database connection status: Connected
+Attempting to add product 19 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-09 03:37:02 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 31
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 31
+Database connection status: Connected
+Attempting to add product 31 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-09 07:26:46 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 19
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 19
+Database connection status: Connected
+Attempting to add product 19 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-09 08:17:15 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 90
+                    [user_id] => 1
+                    [product_id] => 19
+                    [quantity] => 1
+                    [name] => ANUA Heartleaf Quercetinol Pore Cleanser
+                    [price] => 2700.00
+                    [image] => product_images/acne_cleanser.jpg
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 92
+            [payment_method] => Khalti
+            [total_amount] => 2700
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 20
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 20
+Database connection status: Connected
+Attempting to add product 20 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 05:43:58 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 9
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 9
+Database connection status: Connected
+Attempting to add product 9 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 07:28:07 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 20
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 20
+Database connection status: Connected
+Attempting to add product 20 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 15:15:10 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 49
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 49
+Database connection status: Connected
+Attempting to add product 49 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 15:15:45 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 96
+            [payment_method] => Khalti
+            [total_amount] => 1550
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 94
+                    [user_id] => 1
+                    [product_id] => 49
+                    [quantity] => 1
+                    [name] => RéVive Rescue Balm Overnight Mask
+                    [price] => 1550.00
+                    [image] => product_images/revivemask.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 35
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 35
+Database connection status: Connected
+Attempting to add product 35 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:22:50 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 39
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 39
+Database connection status: Connected
+Attempting to add product 39 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:23:32 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 97
+            [payment_method] => Cash on Delivery
+            [total_amount] => 4890
+            [status] => Pending
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 95
+                    [user_id] => 1
+                    [product_id] => 35
+                    [quantity] => 1
+                    [name] => ANUA Azelaic Acid 3 Cica Skin Clarifying Toner
+                    [price] => 3000.00
+                    [image] => product_images/ros_toner.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 96
+                    [user_id] => 1
+                    [product_id] => 39
+                    [quantity] => 1
+                    [name] => Cosrx Advanced Snail 96 Mucin Power Essence
+                    [price] => 1890.00
+                    [image] => product_images/cosrxserum.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:27:26 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 98
+            [payment_method] => Cash on Delivery
+            [total_amount] => 752
+            [status] => Pending
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 95
+                    [user_id] => 1
+                    [product_id] => 35
+                    [quantity] => 1
+                    [name] => ANUA Azelaic Acid 3 Cica Skin Clarifying Toner
+                    [price] => 3000.00
+                    [image] => product_images/ros_toner.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 96
+                    [user_id] => 1
+                    [product_id] => 39
+                    [quantity] => 1
+                    [name] => Cosrx Advanced Snail 96 Mucin Power Essence
+                    [price] => 1890.00
+                    [image] => product_images/cosrxserum.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:29:14 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 99
+            [payment_method] => Khalti
+            [total_amount] => 752
+            [status] => Paid
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 95
+                    [user_id] => 1
+                    [product_id] => 35
+                    [quantity] => 1
+                    [name] => ANUA Azelaic Acid 3 Cica Skin Clarifying Toner
+                    [price] => 3000.00
+                    [image] => product_images/ros_toner.jpg
+                )
+
+            [1] => Array
+                (
+                    [id] => 96
+                    [user_id] => 1
+                    [product_id] => 39
+                    [quantity] => 1
+                    [name] => Cosrx Advanced Snail 96 Mucin Power Essence
+                    [price] => 1890.00
+                    [image] => product_images/cosrxserum.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:33:21 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 100
+            [payment_method] => Khalti
+            [total_amount] => 752
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 99
+                    [user_id] => 1
+                    [product_id] => 6
+                    [quantity] => 1
+                    [name] => Dot & Key Watermelon Moisturizer- 60 Ml
+                    [price] => 752.00
+                    [image] => product_images/dotandkeymoist.JPG
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 1
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 1
+Database connection status: Connected
+Attempting to add product 1 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:37:44 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 101
+            [payment_method] => Khalti
+            [total_amount] => 299
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 100
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:37:45 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 101
+            [payment_method] => Khalti
+            [total_amount] => 299
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 100
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 4
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 4
+Database connection status: Connected
+Attempting to add product 4 to cart for user 1
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:43:38 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 101
+            [payment_method] => Khalti
+            [total_amount] => 299
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [order_id] => 102
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 2
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 2
+Database connection status: Connected
+Attempting to add product 2 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:45:31 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 101
+            [payment_method] => Khalti
+            [total_amount] => 299
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 2
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 2
+Database connection status: Connected
+Attempting to add product 2 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:45:33 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 101
+            [payment_method] => Khalti
+            [total_amount] => 299
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 2
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 2
+Database connection status: Connected
+Attempting to add product 2 to cart for user 1
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:56:29 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 104
+            [payment_method] => Khalti
+            [total_amount] => 475
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 103
+                    [user_id] => 1
+                    [product_id] => 2
+                    [quantity] => 1
+                    [name] => Fixderma Durave Moisturizer Deep Hydration Face Moisturizer - 50g
+                    [price] => 475.00
+                    [image] => product_images/fixdermamoist.jpg
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 2
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 2
+Database connection status: Connected
+Attempting to add product 2 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:57:34 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 104
+            [payment_method] => Khalti
+            [total_amount] => 475
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 104
+                    [user_id] => 1
+                    [product_id] => 2
+                    [quantity] => 1
+                    [name] => Fixderma Durave Moisturizer Deep Hydration Face Moisturizer - 50g
+                    [price] => 475.00
+                    [image] => product_images/fixdermamoist.jpg
+                )
+
+        )
+
+    [order_id] => 106
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 1
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 1
+Database connection status: Connected
+Attempting to add product 1 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:58:10 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 104
+            [payment_method] => Khalti
+            [total_amount] => 475
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 104
+                    [user_id] => 1
+                    [product_id] => 2
+                    [quantity] => 1
+                    [name] => Fixderma Durave Moisturizer Deep Hydration Face Moisturizer - 50g
+                    [price] => 475.00
+                    [image] => product_images/fixdermamoist.jpg
+                )
+
+        )
+
+    [order_id] => 107
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 3
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 3
+Database connection status: Connected
+Attempting to add product 3 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:59:01 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 104
+            [payment_method] => Khalti
+            [total_amount] => 475
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 106
+                    [user_id] => 1
+                    [product_id] => 3
+                    [quantity] => 1
+                    [name] => Cetaphil Moisturizing Cream (80g)
+                    [price] => 935.00
+                    [image] => product_images/cetaphilmoist.JPG
+                )
+
+        )
+
+    [order_id] => 109
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 6
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 6
+Database connection status: Connected
+Attempting to add product 6 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 16:59:21 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 104
+            [payment_method] => Khalti
+            [total_amount] => 475
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 107
+                    [user_id] => 1
+                    [product_id] => 6
+                    [quantity] => 1
+                    [name] => Dot & Key Watermelon Moisturizer- 60 Ml
+                    [price] => 752.00
+                    [image] => product_images/dotandkeymoist.JPG
+                )
+
+        )
+
+    [order_id] => 110
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 8
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 8
+Database connection status: Connected
+Attempting to add product 8 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:03:06 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 111
+            [payment_method] => Khalti
+            [total_amount] => 1125
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 108
+                    [user_id] => 1
+                    [product_id] => 8
+                    [quantity] => 1
+                    [name] => Uv Doux Sunscreen Gel, Spf 50+, 50gm
+                    [price] => 1125.00
+                    [image] => product_images/uvdouxsun.JPG
+                )
+
+        )
+
+    [order_id] => 110
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 10
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 10
+Database connection status: Connected
+Attempting to add product 10 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:05:32 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 111
+            [payment_method] => Khalti
+            [total_amount] => 1125
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 109
+                    [user_id] => 1
+                    [product_id] => 10
+                    [quantity] => 1
+                    [name] => Aqualogica Glow+ Sunscreen 80g
+                    [price] => 911.00
+                    [image] => product_images/aqualogicasun.JPG
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => 
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 10
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 10
+Database connection status: Connected
+Attempting to add product 10 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:06:34 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 111
+            [payment_method] => Khalti
+            [total_amount] => 1125
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 110
+                    [user_id] => 1
+                    [product_id] => 10
+                    [quantity] => 1
+                    [name] => Aqualogica Glow+ Sunscreen 80g
+                    [price] => 911.00
+                    [image] => product_images/aqualogicasun.JPG
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 10
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 10
+Database connection status: Connected
+Attempting to add product 10 to cart for user 1
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:08:34 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 112
+            [payment_method] => Khalti
+            [total_amount] => 911
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 110
+                    [user_id] => 1
+                    [product_id] => 10
+                    [quantity] => 1
+                    [name] => Aqualogica Glow+ Sunscreen 80g
+                    [price] => 911.00
+                    [image] => product_images/aqualogicasun.JPG
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 10
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 10
+Database connection status: Connected
+Attempting to add product 10 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:08:38 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 112
+            [payment_method] => Khalti
+            [total_amount] => 911
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 110
+                    [user_id] => 1
+                    [product_id] => 10
+                    [quantity] => 1
+                    [name] => Aqualogica Glow+ Sunscreen 80g
+                    [price] => 911.00
+                    [image] => product_images/aqualogicasun.JPG
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 12
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 12
+Database connection status: Connected
+Attempting to add product 12 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:23:48 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 113
+            [payment_method] => Khalti
+            [total_amount] => 1861
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 111
+                    [user_id] => 1
+                    [product_id] => 10
+                    [quantity] => 1
+                    [name] => Aqualogica Glow+ Sunscreen 80g
+                    [price] => 911.00
+                    [image] => product_images/aqualogicasun.JPG
+                )
+
+            [1] => Array
+                (
+                    [id] => 112
+                    [user_id] => 1
+                    [product_id] => 12
+                    [quantity] => 1
+                    [name] => Sunscoop Glow Even Tone Tinted Sunscreen Spf 50 Pa++++, 45g
+                    [price] => 950.00
+                    [image] => product_images/sunscoop.JPG
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 11
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 11
+Database connection status: Connected
+Attempting to add product 11 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:24:34 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 114
+            [payment_method] => Khalti
+            [total_amount] => 1861
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 111
+                    [user_id] => 1
+                    [product_id] => 10
+                    [quantity] => 1
+                    [name] => Aqualogica Glow+ Sunscreen 80g
+                    [price] => 911.00
+                    [image] => product_images/aqualogicasun.JPG
+                )
+
+            [1] => Array
+                (
+                    [id] => 112
+                    [user_id] => 1
+                    [product_id] => 12
+                    [quantity] => 1
+                    [name] => Sunscoop Glow Even Tone Tinted Sunscreen Spf 50 Pa++++, 45g
+                    [price] => 950.00
+                    [image] => product_images/sunscoop.JPG
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 11
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 11
+Database connection status: Connected
+Attempting to add product 11 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:26:22 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 115
+            [payment_method] => Khalti
+            [total_amount] => 1861
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 111
+                    [user_id] => 1
+                    [product_id] => 10
+                    [quantity] => 1
+                    [name] => Aqualogica Glow+ Sunscreen 80g
+                    [price] => 911.00
+                    [image] => product_images/aqualogicasun.JPG
+                )
+
+            [1] => Array
+                (
+                    [id] => 112
+                    [user_id] => 1
+                    [product_id] => 12
+                    [quantity] => 1
+                    [name] => Sunscoop Glow Even Tone Tinted Sunscreen Spf 50 Pa++++, 45g
+                    [price] => 950.00
+                    [image] => product_images/sunscoop.JPG
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 16
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 16
+Database connection status: Connected
+Attempting to add product 16 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:29:59 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 116
+            [payment_method] => Khalti
+            [total_amount] => 2000
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 115
+                    [user_id] => 1
+                    [product_id] => 16
+                    [quantity] => 1
+                    [name] => K-SECRET SEOUL 1988 Eye Cream
+                    [price] => 2000.00
+                    [image] => product_images/seoul_eye.jpg
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 7
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 7
+Database connection status: Connected
+Attempting to add product 7 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:34:45 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 117
+            [payment_method] => Cash on Delivery
+            [total_amount] => 1062
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 116
+                    [user_id] => 1
+                    [product_id] => 7
+                    [quantity] => 1
+                    [name] => The Derma Co Ultra Light Zinc Mineral Sunscreen- 50g
+                    [price] => 1062.00
+                    [image] => product_images/dermaco.jpg
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 24
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 24
+Database connection status: Connected
+Attempting to add product 24 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:35:19 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 118
+            [payment_method] => Khalti
+            [total_amount] => 600
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 117
+                    [user_id] => 1
+                    [product_id] => 24
+                    [quantity] => 1
+                    [name] => Minimalist 2% Salicylic Acid & LHA Face Wash
+                    [price] => 600.00
+                    [image] => product_images/acne_facewash.jpg
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 1
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 1
+Database connection status: Connected
+Attempting to add product 1 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-12 17:37:34 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 119
+            [payment_method] => Cash on Delivery
+            [total_amount] => 299
+        )
+
+    [user_details] => Array
+        (
+            [name] => Bhawana Aryal
+            [email] => aryalbhawana2003@gmail.com
+            [phone] => 9808116991
+            [address] => Dhapasi
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 118
+                    [user_id] => 1
+                    [product_id] => 1
+                    [quantity] => 1
+                    [name] => Plum Green Tea Oil Free Moisturizer, 50ml
+                    [price] => 299.00
+                    [image] => product_images/plummoist.jpg
+                )
+
+        )
+
+    [order_id] => 
+    [payment_method] => cod
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 10
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 10
+Database connection status: Connected
+Attempting to add product 10 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-13 02:55:51 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 41
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 41
+Database connection status: Connected
+Attempting to add product 41 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-13 02:56:05 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [order] => Array
+        (
+            [order_id] => 121
+            [payment_method] => Cash on Delivery
+            [total_amount] => 2345
+        )
+
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 120
+                    [user_id] => 1
+                    [product_id] => 41
+                    [quantity] => 1
+                    [name] => Paula's Choice Skin Recovery Toner
+                    [price] => 2345.00
+                    [image] => product_images/paulatoner.jpg
+                )
+
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 41
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 41
+Database connection status: Connected
+Attempting to add product 41 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-13 06:52:32 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 8
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 14
+)
+
+Database connection included
+User ID: 8
+Action: add
+Product ID: 14
+Database connection status: Connected
+Attempting to add product 14 to cart for user 8
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-13 06:53:52 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 8
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 122
+                    [user_id] => 8
+                    [product_id] => 14
+                    [quantity] => 1
+                    [name] => Beauty of Joseon Revive Eye Serum: Ginseng + Retinal
+                    [price] => 2100.00
+                    [image] => product_images/boj_eye.JPG
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 123
+            [payment_method] => Khalti
+            [total_amount] => 2100
+        )
+
+    [user_details] => Array
+        (
+            [name] => Ram Roka
+            [email] => ramroka@gmail.com
+            [phone] => 9876345210
+            [address] => Kathmandu
+        )
+
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 45
+)
+
+Database connection included
+User ID: 8
+Action: add
+Product ID: 45
+Database connection status: Connected
+Attempting to add product 45 to cart for user 8
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-13 06:53:55 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 8
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 122
+                    [user_id] => 8
+                    [product_id] => 14
+                    [quantity] => 1
+                    [name] => Beauty of Joseon Revive Eye Serum: Ginseng + Retinal
+                    [price] => 2100.00
+                    [image] => product_images/boj_eye.JPG
+                )
+
+        )
+
+    [order] => Array
+        (
+            [order_id] => 123
+            [payment_method] => Khalti
+            [total_amount] => 2100
+        )
+
+    [user_details] => Array
+        (
+            [name] => Ram Roka
+            [email] => ramroka@gmail.com
+            [phone] => 9876345210
+            [address] => Kathmandu
+        )
+
+)
+
+GET data: Array
+(
+)
+
+POST data: Array
+(
+    [action] => add
+    [product_id] => 45
+)
+
+Database connection included
+User ID: 8
+Action: add
+Product ID: 45
+Database connection status: Connected
+Attempting to add product 45 to cart for user 8
+Check query executed: Success
+Product already in cart
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-13 10:40:57 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 16
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 16
+Database connection status: Connected
+Attempting to add product 16 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
+
+=== Cart Action Request at 2025-11-13 11:09:30 ===
+Session started
+SESSION data: Array
+(
+    [user_id] => 1
+    [username] => 
+    [role] => customer
+    [loggedin] => 1
+)
+
+GET data: Array
+(
+    [action] => add
+)
+
+POST data: Array
+(
+    [product_id] => 15
+)
+
+Database connection included
+User ID: 1
+Action: add
+Product ID: 15
+Database connection status: Connected
+Attempting to add product 15 to cart for user 1
+Check query executed: Success
+Insert query executed: Success
+Product added to cart successfully
+Database connection closed
+=== End of request ===
